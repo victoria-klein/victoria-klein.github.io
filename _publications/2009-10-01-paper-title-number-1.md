@@ -9,4 +9,4 @@ paperurl: 'http://victoria-klein.github.io/files/VK_CV.pdf'
 citation:
 ---
 
-[Download CV here](http://victoria-klein.github.io/files/VK_CV.pdf)
+<!-- [Download CV here](http://victoria-klein.github.io/files/VK_CV.pdf) -->
