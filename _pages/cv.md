@@ -9,9 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
-{% for post in site.cvs reversed %}
+<!-- {% for post in site.cvs reversed %}
   {% include archive-single-cv.html %}
-{% endfor %}
+{% endfor %} -->
+
+[Download CV here](http://victoria-klein.github.io/pages/VK_CV.pdf)
 
 <!-- 
 
