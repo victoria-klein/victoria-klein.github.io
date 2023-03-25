@@ -1,7 +1,7 @@
 ---
 title: "Victoria Amelie Klein"
 collection: 
-permalink: /publications/vk_cv_
+permalink: /publication/vk_cv_
 excerpt: 
 date:
 venue: 
