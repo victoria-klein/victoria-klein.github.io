@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Victoria Klein"
   avatar           : "profile.png"
-  bio              : "PhD candidate in Mathematics at Imperial College London. Currently on research visit at University of Amsterdam."
+  bio              : "PhD Candidate, Mathematics, Imperial College London. Currently on visit at VIS Lab, University of Amsterdam."
   location         : "London, England"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"http://yourfullgooglescholarurl.com"
-  email            :
+  email            : "victoria.klein18@ic.ac.uk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/victoria-klein-5a6451140/"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
