@@ -9,11 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
-{% for post in site.cvs reversed %}
+<!-- {% for post in site.cvs reversed %}
   {% include archive-single.html %}
-{% endfor %}
+{% endfor %} -->
 
-<!-- 
+
 Education
 ======
 * B.S. in GitHub, GitHub University, 2012
@@ -62,4 +62,3 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
- -->
