@@ -9,10 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
-<!-- {% for post in site.cvs reversed %}
-  {% include archive-single.html %}
-{% endfor %} -->
+{% for post in site.cvs reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}
 
+<!-- 
 
 Education
 ======
@@ -61,4 +62,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
