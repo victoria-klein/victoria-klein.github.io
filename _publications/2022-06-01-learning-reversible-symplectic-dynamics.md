@@ -12,4 +12,3 @@ citation: 'Valperga, R., Turaev, D., Webster, K. N., Klein, V., Lamb, J. S. W.  
 
 [Download paper here](http://academicpages.github.io/files/paper1.pdf)
 
-Recommended citation: Valperga, R., Turaev, D., Webster, K. N., Klein, V., Lamb, J. S. W.  (2022). &quot;Learning reversible symplectic dynamics.&quot; <i>Learning for Dynamics and Control Conference</i>. 1(1).
