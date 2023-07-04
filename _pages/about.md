@@ -12,7 +12,7 @@ I am a PhD student in the Department of Mathematics at Imperial College London. 
 
 I am very interested in problems related to mathematics and physics involving symmetries and dynamical systems, and approaches to their solutions involving machine learning. 
 
-I am spending January to April 2023 on a research visit, funded by the Dorris Chen Mobility Asward 2022, at [VIS Lab](https://ivi.fnwi.uva.nl/vislab) at the University of Amsterdam, supervised by [Associate Professor Efstratios Gavves](https://ivi.fnwi.uva.nl/vislab/author/efstratios-gavves/).
+I recently spent the past 5 months (January to May 2023) on a research visit, funded by the Dorris Chen Mobility Award 2022, at [VIS Lab](https://ivi.fnwi.uva.nl/vislab) at the University of Amsterdam, supervised by [Associate Professor Efstratios Gavves](https://ivi.fnwi.uva.nl/vislab/author/efstratios-gavves/).
 
 
 <!-- Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
