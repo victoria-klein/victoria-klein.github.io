@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2024-05-22-efficient-equivariant-learninig-using-algebraic-invariant-theory
 excerpt: ''
 date: 2024-05-22
-venue: 'Pre-print, under review.'
+venue: ''
 citation: '(use BibTex)'
 
 ---
