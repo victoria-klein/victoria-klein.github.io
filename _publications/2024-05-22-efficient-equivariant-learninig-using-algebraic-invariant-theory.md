@@ -1,7 +1,7 @@
 ---
 title: "Efficient equivariant learning using algebraic invariant theory"
 collection: publications
-permalink: /publication/2024-05-22-efficient-equivariant-learninig-using-algebraic-invariant-theory
+permalink: /publication/efficient-equivariant-learninig-using-algebraic-invariant-theory
 authors: Victoria Klein, Jeroen Lamb, Kevin Webster
 ---
 
