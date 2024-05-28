@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in the Department of Mathematics at Imperial College London. I am a student in the [EPSRC CDT for Mathematics of Random Systems](https://www.randomsystems-cdt.ac.uk/).
+I am a PhD student in the Department of Mathematics at Imperial College London. I am a student in the [EPSRC CDT for Mathematics of Random Systems](https://www.randomsystems-cdt.ac.uk/). I am currently in the writing up stages of my PhD, finishing this year.
 
 My research focuses on using invariant theory and more generally algebra in machine learning architectures for problems involving systems that exhibit certain symmetries or equivariance.
 
@@ -17,7 +17,7 @@ My supervisors are Professor Jeroen Lamb and [Dr Kevin Webster](https://www.cour
 
 I spent the past 5 months January to May 2023 on a research visit, funded by the Dorris Chen Mobility Award 2022, at [VIS Lab](https://ivi.fnwi.uva.nl/vislab) at the University of Amsterdam, supervised by [Associate Professor Efstratios Gavves](https://ivi.fnwi.uva.nl/vislab/author/efstratios-gavves/). My collaborators were [Riccardo Valperga](https://x.com/RValperga) and [Alex Gabel](https://x.com/gabel_alex).
 
-I am currently in the writing up stages of my PhD, finishing this year.
+I am also supported by the [G-Research](https://www.gresearch.com/) PhD Grant programme.
 
 
 <!-- Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
