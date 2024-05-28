@@ -1,6 +1,6 @@
 ---
 title: "Learning reversible symplectic dynamics"
-authors: "Alex Gabel, Victoria Klein, Riccardo Valeperga, Jeroen S. W. Lamb, Kevin N. Websterr, Rick Quax, Efstratios Gavves
+author: "Alex Gabel, Victoria Klein, Riccardo Valeperga, Jeroen S. W. Lamb, Kevin N. Websterr, Rick Quax, Efstratios Gavves
 collection: publications
 permalink: /publication/2022-06-01-learning-reversible-symplectic-dynamics
 excerpt: ''
