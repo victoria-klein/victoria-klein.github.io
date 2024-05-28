@@ -13,7 +13,7 @@ redirect_from:
   {% include archive-single-cv.html %}
 {% endfor %} -->
 
-[Download CV here](http://victoria-klein.github.io/files/VK_CV.pdf)
+[Download CV here](<http://victoria-klein.github.io/files/VK_CV (1).pdf>)
 
 <!-- 
 
