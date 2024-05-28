@@ -8,11 +8,16 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in the Department of Mathematics at Imperial College London. I am a student in the [EPSRC CDT for Mathematics of Random Systems](https://www.randomsystems-cdt.ac.uk/). My PhD research focuses on the intersection between machine learning and dynamical systems. My supervisors are Professor Jeroen Lamb and [Dr Kevin Webster](https://www.coursera.org/instructor/kevin-webster), who are part of the [Dynamical Systems research group](https://www.ma.imperial.ac.uk/~mrasmuss/DynamIC/index.php) at Imperial College London.
+I am a PhD student in the Department of Mathematics at Imperial College London. I am a student in the [EPSRC CDT for Mathematics of Random Systems](https://www.randomsystems-cdt.ac.uk/).
 
-I am very interested in problems related to mathematics and physics involving symmetries and dynamical systems, and approaches to their solutions involving machine learning. 
+My research focuses on using invariant theory and more generally algebra in machine learning architectures for problems involving systems that exhibit certain symmetries or equivariance.
 
-I recently spent the past 5 months (January to May 2023) on a research visit, funded by the Dorris Chen Mobility Award 2022, at [VIS Lab](https://ivi.fnwi.uva.nl/vislab) at the University of Amsterdam, supervised by [Associate Professor Efstratios Gavves](https://ivi.fnwi.uva.nl/vislab/author/efstratios-gavves/).
+My supervisors are Professor Jeroen Lamb and [Dr Kevin Webster](https://www.coursera.org/instructor/kevin-webster), who are part of the [Dynamical Systems research group](https://www.ma.imperial.ac.uk/~mrasmuss/DynamIC/index.php) at Imperial College London.
+
+
+I spent the past 5 months January to May 2023 on a research visit, funded by the Dorris Chen Mobility Award 2022, at [VIS Lab](https://ivi.fnwi.uva.nl/vislab) at the University of Amsterdam, supervised by [Associate Professor Efstratios Gavves](https://ivi.fnwi.uva.nl/vislab/author/efstratios-gavves/). My collaborators were [Riccardo Valperga](https://x.com/RValperga) and [Alex Gabel](https://x.com/gabel_alex).
+
+I am currently in the writing up stages of my PhD, finishing this year.
 
 
 <!-- Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
