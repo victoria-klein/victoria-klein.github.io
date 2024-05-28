@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2022-06-01-learning-reversible-symplectic-dynamics
 excerpt: ''
 date: 2022-06-01
-venue: 'Learning for Dynamics and Control Conference'
+venue: '2022 4th Annual Conference on Learning for Dynamics and Control,Proceedings of Machine Learning Research vol 168:1–11'
 citation: '(use BibTex)'
 
 ---
