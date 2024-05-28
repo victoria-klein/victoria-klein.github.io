@@ -3,8 +3,6 @@ title: "Efficient equivariant learning using algebraic invariant theory"
 collection: publications
 permalink: /publication/2024-05-22-efficient-equivariant-learninig-using-algebraic-invariant-theory
 excerpt: ''
-date: 2024-05-22
-citation: '(use BibTex)'
 
 ---
 
