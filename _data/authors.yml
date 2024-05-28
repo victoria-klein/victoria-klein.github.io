@@ -1,18 +1,15 @@
 # Authors
 
-Name Name:
-  name        : "Name Name"
-  uri         : "http://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
+Kevin Webster:
+  name        : "Kevin N. Webster"
+  uri         : "https://www.coursera.org/instructor/kevin-webster"
+  email       : "kevin.webster@imperial.ac.uk"
+  bio         : ""
+  avatar      : ""
+  twitter     : ""
+  google_plus : ""
 
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+Jeroen Lamb:
+  name        : "Jeroen Lamb"
+  uri         : "https://profiles.imperial.ac.uk/jsw.lamb"
+  email       : "jsw.lamb@imperial.ac.uk"
