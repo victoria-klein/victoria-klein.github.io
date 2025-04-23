@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -78,7 +79,7 @@ const Index = () => {
             </div>
             {links.map((link, index) => (
               <div key={link.path} className="absolute" style={{
-                top: `${index * 50 + 150}px`,
+                top: `${index * 50 + 130}px`,
                 left: '300px',
                 transform: `rotate(${link.rotation})`,
                 zIndex: 30
