@@ -20,22 +20,21 @@ const Navigation = () => {
         <div className="flex items-center justify-center h-16">
           <div className="flex space-x-8">
             {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={cn(
-                  "font-courier relative px-3 py-2 text-sm transition-colors",
-                  "hover:text-secondary",
-                  hoveredLink === link.path ? "text-secondary" : "text-primary"
-                )}
-                onMouseEnter={() => setHoveredLink(link.path)}
-                onMouseLeave={() => setHoveredLink(null)}
-              >
-                {link.label}
-                {hoveredLink === link.path && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-secondary transform origin-left transition-transform duration-200" />
-                )}
-              </Link>
+              <div key={link.path} className="inline-block relative">
+                <span className="absolute inset-0 bg-secondary opacity-20 transform rotate-3"></span>
+                <Link
+                  to={link.path}
+                  className={cn(
+                    "relative font-courier px-3 py-2 text-sm transition-colors z-10",
+                    "hover:text-secondary",
+                    hoveredLink === link.path ? "text-secondary" : "text-primary"
+                  )}
+                  onMouseEnter={() => setHoveredLink(link.path)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                >
+                  {link.label}
+                </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -45,3 +44,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
