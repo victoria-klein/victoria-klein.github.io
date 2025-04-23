@@ -50,14 +50,14 @@ const Index = () => {
       }} transition={{
         duration: 0.8
       }} className="text-left">
-          <div className="relative h-[400px]">
-            <div className="absolute left-1/2 -translate-x-1/2 h-full w-64">
+          <div className="relative h-[400px] -ml-32">
+            <div className="absolute left-64 h-full w-64">
               <LadderSvg />
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
             top: `${index * 50 + 100}px`,
-            left: '50%',
-            transform: `translateX(-50%) rotate(${link.rotation})`,
+            left: '64px',
+            transform: `rotate(${link.rotation})`,
             zIndex: 30
           }}>
                 <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight">
