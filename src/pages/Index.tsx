@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -55,7 +56,7 @@ const Index = () => {
               <LadderSvg />
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
-            top: `${index * 50 + 100}px`,
+            top: `${index * 50 + 80}px`, // Moved up by 20px
             left: '300px',
             transform: `rotate(${link.rotation})`,
             zIndex: 30
