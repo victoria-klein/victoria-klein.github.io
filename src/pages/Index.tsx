@@ -56,7 +56,7 @@ const Index = () => {
                 key={link.path} 
                 className="absolute w-full"
                 style={{
-                  top: `${index * 80}px`, // Increased spacing to position links lower
+                  top: `${index * 50 + 50}px`, // Move links down by adding 50px offset
                   zIndex: 30
                 }}
               >
