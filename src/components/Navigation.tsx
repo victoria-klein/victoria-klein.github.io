@@ -7,11 +7,11 @@ const Navigation = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   const links = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/academic', label: 'Academic Journey' },
-    { path: '/professional', label: 'Professional Work' },
-    { path: '/thoughts', label: 'Thoughts' },
+    { path: '/', label: 'Home', rotation: '-3deg' },
+    { path: '/about', label: 'About', rotation: '2deg' },
+    { path: '/academic', label: 'Academic Journey', rotation: '-2deg' },
+    { path: '/professional', label: 'Professional Work', rotation: '3deg' },
+    { path: '/thoughts', label: 'Thoughts', rotation: '-1deg' },
   ];
 
   return (
@@ -21,7 +21,10 @@ const Navigation = () => {
           <div className="flex space-x-8">
             {links.map((link) => (
               <div key={link.path} className="inline-block relative">
-                <span className="absolute inset-0 bg-secondary opacity-20 transform rotate-3"></span>
+                <span 
+                  className="absolute inset-0 bg-secondary opacity-20"
+                  style={{ transform: `rotate(${link.rotation})` }}
+                ></span>
                 <Link
                   to={link.path}
                   className={cn(
