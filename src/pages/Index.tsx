@@ -47,7 +47,7 @@ const Index = () => {
       <Avatar 
         className="absolute bottom-8 left-8 w-24 h-24 border-2 border-primary shadow-lg"
         style={{
-          clipPath: 'polygon(50% 0%, 80% 20%, 100% 50%, 80% 80%, 50% 100%, 20% 80%, 0% 50%, 20% 20%)'
+          clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)'
         }}
       >
         <AvatarImage 
