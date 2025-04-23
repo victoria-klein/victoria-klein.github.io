@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -36,38 +35,35 @@ const Index = () => {
   }];
 
   return <div className="min-h-screen pt-16 bg-white relative">
-      <div className="fixed top-16 left-1/2 -translate-x-1/2 z-40">
+      <div className="fixed top-16 left-8 z-40">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
           Victoria Klein
         </span>
       </div>
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8 }} 
-          className="text-left"
-        >
-          <div className="relative h-[400px] flex flex-col items-center justify-center">
-            <div className="w-64 mb-8">
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.8
+      }} className="text-left">
+          <div className="relative h-[400px]">
+            <div className="absolute left-1/2 -translate-x-1/2 h-full w-64">
               <LadderSvg />
             </div>
-            <div className="space-y-4">
-              {links.map((link, index) => (
-                <div 
-                  key={link.path} 
-                  className="text-center"
-                  style={{ transform: `rotate(${link.rotation})` }}
-                >
-                  <Link 
-                    to={link.path} 
-                    className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight"
-                  >
-                    {link.label}
-                  </Link>
-                </div>
-              ))}
-            </div>
+            {links.map((link, index) => <div key={link.path} className="absolute" style={{
+            top: `${index * 50 + 100}px`,
+            left: '50%',
+            transform: `translateX(-50%) rotate(${link.rotation})`,
+            zIndex: 30
+          }}>
+                <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight">
+                  {link.label}
+                </Link>
+              </div>)}
           </div>
         </motion.div>
       </div>
