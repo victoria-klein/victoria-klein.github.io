@@ -45,15 +45,17 @@ const Index = () => {
         </motion.div>
       </div>
       <Avatar 
-        className="absolute bottom-8 left-8 w-24 h-24 border-2 border-primary shadow-lg"
+        className="absolute bottom-8 left-8 w-24 h-24 border-2 border-primary shadow-lg overflow-visible"
         style={{
-          clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)'
+          clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
+          borderRadius: '0'
         }}
       >
         <AvatarImage 
           src="/placeholder.svg" 
           alt="Your profile"
           className="object-cover"
+          style={{ borderRadius: '0' }}
         />
         <AvatarFallback>You</AvatarFallback>
       </Avatar>
