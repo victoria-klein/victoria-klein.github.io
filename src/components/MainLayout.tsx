@@ -9,6 +9,10 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   
   const links = [{
+    path: '/',
+    label: 'Home',
+    rotation: '-3deg'
+  }, {
     path: '/cv',
     label: 'CV',
     rotation: '-2deg'
