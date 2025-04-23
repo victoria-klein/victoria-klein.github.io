@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -23,8 +22,7 @@ const Index = () => {
 
   const links = [
     { path: '/about', label: 'About', rotation: '2deg' },
-    { path: '/academic', label: 'Academic Journey', rotation: '-2deg' },
-    { path: '/professional', label: 'Professional Work', rotation: '3deg' },
+    { path: '/cv', label: 'CV', rotation: '-2deg' },
     { path: '/thoughts', label: 'Thoughts & Projects', rotation: '-1deg' },
   ];
 
