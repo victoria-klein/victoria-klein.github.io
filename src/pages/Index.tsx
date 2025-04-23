@@ -1,7 +1,9 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Ladder } from "lucide-react";
 
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
@@ -47,12 +49,19 @@ const Index = () => {
           <p className="font-courier text-lg text-gray-600 mb-12">
             Welcome to my corner of the internet
           </p>
-          <div className="space-y-4 flex flex-col items-center">
-            {links.map((link) => (
-              <div key={link.path} className="inline-block relative w-full max-w-xs">
+          <div className="relative mx-auto w-48 space-y-12">
+            <Ladder className="absolute left-1/2 -translate-x-1/2 h-[400px] w-12 text-[#FF6B6B] opacity-20" />
+            {links.map((link, index) => (
+              <div 
+                key={link.path} 
+                className="relative w-full"
+                style={{
+                  transform: `translateY(${index * 100}px)`
+                }}
+              >
                 <span 
-                  className="absolute inset-0 bg-secondary opacity-20 w-full left-1/2 -translate-x-1/2"
-                  style={{ transform: `rotate(${link.rotation}) translate(-50%, 0)` }}
+                  className="absolute inset-0 bg-[#FF6B6B] opacity-20"
+                  style={{ transform: `rotate(${link.rotation})` }}
                 ></span>
                 <Link
                   to={link.path}
@@ -81,3 +90,4 @@ const Index = () => {
 };
 
 export default Index;
+
