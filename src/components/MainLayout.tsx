@@ -53,7 +53,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
               className="absolute"
               style={{
                 top: `${index * 50 + 130}px`,
-                left: '-200px',
+                left: '220px',
                 transform: `rotate(${link.rotation})`,
                 zIndex: 30
               }}
