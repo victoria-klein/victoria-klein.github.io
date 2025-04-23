@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { cn } from "@/lib/utils";
@@ -11,7 +10,7 @@ const Navigation = () => {
     { path: '/about', label: 'About', rotation: '2deg' },
     { path: '/academic', label: 'Academic Journey', rotation: '-2deg' },
     { path: '/professional', label: 'Professional Work', rotation: '3deg' },
-    { path: '/thoughts', label: 'Thoughts', rotation: '-1deg' },
+    { path: '/thoughts', label: 'Thoughts & Projects', rotation: '-1deg' },
   ];
 
   return (
@@ -47,4 +46,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
