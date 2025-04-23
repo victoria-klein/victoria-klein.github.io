@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
@@ -21,7 +22,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-16 bg-white">
+    <div className="min-h-screen pt-16 bg-white relative">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,6 +45,14 @@ const Index = () => {
           </div>
         </motion.div>
       </div>
+      <Avatar className="absolute bottom-8 left-8 w-24 h-24 border-2 border-primary shadow-lg">
+        <AvatarImage 
+          src="/placeholder.svg" 
+          alt="Your profile"
+          className="object-cover"
+        />
+        <AvatarFallback>You</AvatarFallback>
+      </Avatar>
     </div>
   );
 };
