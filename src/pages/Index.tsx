@@ -74,8 +74,12 @@ const Index = () => {
         <Avatar className="w-full h-full overflow-hidden" style={{
         clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)'
       }}>
-          <AvatarImage src="/placeholder.svg" alt="Your profile" className="object-cover w-full h-full" />
-          <AvatarFallback>You</AvatarFallback>
+          <AvatarImage 
+            src="/lovable-uploads/86d1ae5f-fce3-4935-9fb3-55a67db6a5cb.png" 
+            alt="Victoria's profile" 
+            className="object-cover w-full h-full" 
+          />
+          <AvatarFallback>VK</AvatarFallback>
         </Avatar>
       </div>
     </div>;
