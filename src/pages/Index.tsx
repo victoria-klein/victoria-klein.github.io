@@ -24,7 +24,7 @@ const Index = () => {
   const links = [
     { path: '/about', label: 'About', rotation: '2deg' },
     { path: '/cv', label: 'CV', rotation: '-2deg' },
-    { path: '/thoughts', label: 'Thoughts & Projects', rotation: '-1deg' },
+    { path: '/thoughts', label: 'Thoughts &\nProjects', rotation: '-1deg' },
   ];
 
   return (
@@ -55,7 +55,7 @@ const Index = () => {
                 key={link.path} 
                 className="absolute w-full"
                 style={{
-                  bottom: `${index * 120 + 50}px`,
+                  bottom: `${index * 120 + 80}px`,
                   zIndex: 30
                 }}
               >
