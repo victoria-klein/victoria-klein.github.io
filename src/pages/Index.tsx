@@ -78,7 +78,7 @@ const Index = () => {
             </div>
             {links.map((link, index) => (
               <div key={link.path} className="absolute" style={{
-                top: `${index * 50 + 80}px`,
+                top: `${index * 50 + 200}px`,
                 left: '300px',
                 transform: `rotate(${link.rotation})`,
                 zIndex: 30
