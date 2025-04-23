@@ -6,12 +6,18 @@ const CV = () => {
   return (
     <MainLayout>
       <div className="space-y-8 w-[600px]">
-        <div className="mb-4">
+        <div className="space-y-2">
           <Link 
             to="/" 
-            className="text-primary hover:text-secondary font-courier"
+            className="block text-primary hover:text-secondary font-courier text-2xl"
           >
             Home
+          </Link>
+          <Link 
+            to="/cv" 
+            className="block text-primary hover:text-secondary font-courier text-2xl"
+          >
+            CV
           </Link>
         </div>
         <section>
