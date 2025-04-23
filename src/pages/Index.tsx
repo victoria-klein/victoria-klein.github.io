@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -86,7 +85,7 @@ const Index = () => {
               }}>
                 <Link 
                   to={link.path} 
-                  className={`inline-block font-courier text-2xl transition-colors whitespace-pre-line leading-tight px-3 py-[55px] ${
+                  className={`inline-block font-courier text-2xl transition-colors whitespace-pre-line leading-tight px-3 ${
                     hoveredLink === link.path ? 'text-[#ea384c]' : 'text-primary'
                   }`}
                   onMouseEnter={() => setHoveredLink(link.path)}
