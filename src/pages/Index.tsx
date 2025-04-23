@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -56,7 +55,7 @@ const Index = () => {
                 key={link.path} 
                 className="absolute w-full"
                 style={{
-                  bottom: `${(links.length - 1 - index) * 120 + 20}px`,
+                  bottom: `${(links.length - 1 - index) * 120}px`,
                   zIndex: 30
                 }}
               >
