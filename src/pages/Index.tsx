@@ -1,10 +1,8 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
-
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
   const text = "Hello! I'm a mathematician who loves AI and quirky design";
@@ -20,7 +18,6 @@ const Index = () => {
     }, 50);
     return () => clearInterval(timer);
   }, []);
-  
   const links = [{
     path: '/about',
     label: 'About',
@@ -34,7 +31,6 @@ const Index = () => {
     label: 'Thoughts &\nProjects',
     rotation: '-1deg'
   }];
-
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
@@ -56,12 +52,13 @@ const Index = () => {
               <LadderSvg />
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
-            top: `${index * 50 + 80}px`, // Moved up by 20px
+            top: `${index * 50 + 80}px`,
+            // Moved up by 20px
             left: '300px',
             transform: `rotate(${link.rotation})`,
             zIndex: 30
           }}>
-                <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight">
+                <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-0 py-0 mx-[12px] my-[25px]">
                   {link.label}
                 </Link>
               </div>)}
@@ -81,5 +78,4 @@ const Index = () => {
       </div>
     </div>;
 };
-
 export default Index;
