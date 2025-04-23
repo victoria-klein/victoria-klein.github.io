@@ -48,7 +48,7 @@ const Index = () => {
       }} className="text-left">
           <div className="relative h-[500px] -ml-48">
             <div className="absolute left-56 top-16 h-full w-64">
-              <div className="absolute left-0 top-0 z-40 mb-4">
+              <div className="absolute left-0 top-0 z-40">
                 <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
                   Victoria Klein
                 </span>
@@ -66,12 +66,12 @@ const Index = () => {
               </div>
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
-            top: `${index * 50 + 80}px`,
-            left: '300px',
-            transform: `rotate(${link.rotation})`,
-            zIndex: 30
-          }}>
-                <Link to={link.path} className="inline-block font-courier text-2xl text-[#6E59A5] hover:text-[#9b87f5] transition-colors whitespace-pre-line leading-tight px-0 py-0 mx-[12px] my-[50px]">
+              top: `${80 + index * 110}px`,
+              left: '150px',
+              transform: `rotate(${link.rotation})`,
+              zIndex: 30
+            }}>
+                <Link to={link.path} className="inline-block font-courier text-2xl text-[#6E59A5] hover:text-[#9b87f5] transition-colors whitespace-pre-line leading-tight px-0 py-0 mx-[12px] my-[12px]">
                   {link.label}
                 </Link>
               </div>)}
