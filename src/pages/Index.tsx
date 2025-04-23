@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -50,9 +51,9 @@ const Index = () => {
           </p>
           <div className="space-y-4 flex flex-col items-center">
             {links.map((link) => (
-              <div key={link.path} className="inline-block relative w-auto max-w-xs">
+              <div key={link.path} className="inline-block relative w-full max-w-xs">
                 <span 
-                  className="absolute inset-0 bg-secondary opacity-20 w-3/4 left-1/2 -translate-x-1/2"
+                  className="absolute inset-0 bg-secondary opacity-20 w-full left-1/2 -translate-x-1/2"
                   style={{ transform: `rotate(${link.rotation}) translate(-50%, 0)` }}
                 ></span>
                 <Link
