@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -62,7 +61,7 @@ const Index = () => {
               >
                 <Link
                   to={link.path}
-                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors relative"
+                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors relative max-w-[15%] mx-auto overflow-hidden whitespace-nowrap text-ellipsis"
                   style={{ transform: `rotate(${link.rotation})` }}
                 >
                   {link.label}
