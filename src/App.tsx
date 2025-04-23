@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,7 +18,11 @@ const AppContent = () => {
   
   return (
     <div className="min-h-screen w-full">
-      {location.pathname !== '/' && <Navigation />}
+      {location.pathname !== '/' && 
+       location.pathname !== '/cv' && 
+       location.pathname !== '/thoughts' && 
+       location.pathname !== '/projects' && 
+       <Navigation />}
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/cv" element={<CV />} />
