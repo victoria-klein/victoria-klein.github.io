@@ -45,7 +45,7 @@ const Index = () => {
         </motion.div>
       </div>
       <div 
-        className="absolute bottom-8 left-8 w-24 h-24"
+        className="fixed bottom-8 left-8 w-24 h-24"
         style={{
           clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
           position: 'relative'
