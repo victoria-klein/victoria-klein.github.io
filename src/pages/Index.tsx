@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
+
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
   const text = "Hello! I'm a mathematician who loves AI and quirky design";
+
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -18,6 +20,7 @@ const Index = () => {
     }, 50);
     return () => clearInterval(timer);
   }, []);
+
   const links = [{
     path: '/about',
     label: 'About',
@@ -35,6 +38,7 @@ const Index = () => {
     label: 'Projects',
     rotation: '2deg'
   }];
+
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40 hidden">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
@@ -71,19 +75,29 @@ const Index = () => {
                 </Avatar>
               </div>
             </div>
-            {links.map((link, index) => <div key={link.path} className="absolute" style={{
-            top: `${index * 50 + 80}px`,
-            left: '300px',
-            transform: `rotate(${link.rotation})`,
-            zIndex: 30
-          }}>
-                <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-3 py-[55px]">
-                  {link.label}
+            {links.map((link, index) => (
+              <div key={link.path} className="absolute" style={{
+                top: `${index * 50 + 80}px`,
+                left: '300px',
+                transform: `rotate(${link.rotation})`,
+                zIndex: 30
+              }}>
+                <Link 
+                  to={link.path} 
+                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-3 py-[55px] relative group"
+                >
+                  <span 
+                    className="absolute inset-0 bg-[#FFDEE2] opacity-0 group-hover:opacity-100 transition-opacity" 
+                    style={{ transform: `rotate(${link.rotation})` }}
+                  />
+                  <span className="relative z-10">{link.label}</span>
                 </Link>
-              </div>)}
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
     </div>;
 };
+
 export default Index;
