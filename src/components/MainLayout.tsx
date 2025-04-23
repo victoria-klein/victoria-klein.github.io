@@ -1,9 +1,27 @@
 
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  
+  const links = [{
+    path: '/cv',
+    label: 'CV',
+    rotation: '-2deg'
+  }, {
+    path: '/thoughts',
+    label: 'Thoughts',
+    rotation: '-1deg'
+  }, {
+    path: '/projects',
+    label: 'Projects',
+    rotation: '2deg'
+  }];
+
   return (
     <div className="min-h-screen pt-16 bg-white relative">
       <div className="max-w-4xl mx-auto px-4 py-16">
@@ -29,6 +47,27 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
               </div>
             </div>
           </div>
+          {links.map((link, index) => (
+            <div
+              key={link.path}
+              className="absolute"
+              style={{
+                top: `${index * 50 + 130}px`,
+                left: '-200px',
+                transform: `rotate(${link.rotation})`,
+                zIndex: 30
+              }}
+            >
+              <Link
+                to={link.path}
+                className={`inline-block font-courier text-2xl transition-colors whitespace-pre-line leading-tight px-3 ${hoveredLink === link.path ? 'text-[#ea384c]' : 'text-primary'}`}
+                onMouseEnter={() => setHoveredLink(link.path)}
+                onMouseLeave={() => setHoveredLink(null)}
+              >
+                {link.label}
+              </Link>
+            </div>
+          ))}
           <div className="absolute left-[500px] top-16">
             {children}
           </div>
