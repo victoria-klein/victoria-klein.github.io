@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from "framer-motion";
 const ThoughtsAndProjects = () => {
@@ -18,14 +19,13 @@ const ThoughtsAndProjects = () => {
           
           <section className="mb-12">
             <h2 className="font-courier text-2xl text-secondary mb-4 text-left">Thoughts</h2>
-            <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-lg space-y-4">
+            <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-none space-y-4">
               <div>
                 <p className="font-courier text-lg text-gray-700 text-left font-normal">My own</p>
-                <p className="font-courier text-md text-gray-500 mt-2 text-left">On scaling
------</p>
+                <p className="font-courier text-md text-gray-500 mt-2 text-left">On scaling</p>
               </div>
               <div>
-                <p className="font-courier text-lg text-gray-700 text-left font-normal">Others'</p>
+                <p className="font-courier text-lg text-gray-700 text-left font-normal">Emerging Ideas</p>
                 <p className="font-courier text-md text-gray-500 mt-2 text-left">Exploring new concepts and perspectives.</p>
               </div>
             </div>
@@ -33,7 +33,7 @@ const ThoughtsAndProjects = () => {
           
           <section>
             <h2 className="font-courier text-2xl text-secondary mb-4 text-left">Projects</h2>
-            <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-lg">
+            <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-none">
               <p className="font-courier text-lg text-gray-700">
                 A showcase of personal and professional projects spanning mathematics, AI, and software development.
               </p>
