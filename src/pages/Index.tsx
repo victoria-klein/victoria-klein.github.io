@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -52,12 +51,6 @@ const Index = () => {
           position: 'relative'
         }}
       >
-        <div 
-          className="absolute inset-0 border-2 border-primary"
-          style={{
-            clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
-          }}
-        />
         <Avatar 
           className="w-full h-full overflow-hidden"
           style={{
