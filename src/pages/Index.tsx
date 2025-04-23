@@ -30,7 +30,7 @@ const Index = () => {
     rotation: '-2deg'
   }, {
     path: '/thoughts',
-    label: 'Thoughts / Projects',
+    label: 'Thoughts /\nProjects',
     rotation: '-1deg'
   }];
 

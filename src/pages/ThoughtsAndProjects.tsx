@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from "framer-motion";
 
@@ -15,7 +14,8 @@ const ThoughtsAndProjects = () => {
         duration: 0.8
       }} className="text-center">
           <h1 className="font-courier text-4xl text-primary mb-8 text-left md:text-2xl">
-            Thoughts / Projects
+            Thoughts /
+            Projects
           </h1>
           
           <section className="mb-12">
