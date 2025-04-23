@@ -1,7 +1,9 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import LadderSvg from "@/components/LadderSvg";
 
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
@@ -48,6 +50,7 @@ const Index = () => {
             Welcome to my corner of the internet
           </p>
           <div className="relative mx-auto w-48 space-y-12">
+            <LadderSvg />
             {links.map((link, index) => (
               <div 
                 key={link.path} 
