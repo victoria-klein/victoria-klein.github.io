@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { motion } from "framer-motion";
+
 const ThoughtsAndProjects = () => {
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="max-w-4xl mx-auto px-4 py-16">
@@ -21,11 +23,11 @@ const ThoughtsAndProjects = () => {
             <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-none space-y-4">
               <div>
                 <p className="font-courier text-lg text-gray-700 text-left font-normal">My own</p>
-                <p className="font-courier text-md text-gray-500 mt-2 text-left">On scaling</p>
+                <p className="font-courier text-md text-gray-500 mt-2 text-left border border-dashed border-gray-500 p-2">On scaling</p>
               </div>
               <div>
                 <p className="font-courier text-lg text-gray-700 text-left font-normal">Others'</p>
-                <p className="font-courier text-md text-gray-500 mt-2 text-left">https://transformer-circuits.pub/ I find this blog interesting. I am interested in the distillation of attention outputs</p>
+                <p className="font-courier text-md text-gray-500 mt-2 text-left border border-dashed border-gray-500 p-2">https://transformer-circuits.pub/ I find this blog interesting. I am interested in the distillation of attention outputs</p>
               </div>
             </div>
           </section>
@@ -36,7 +38,7 @@ const ThoughtsAndProjects = () => {
               <p className="font-courier text-lg text-gray-700">
                 A showcase of personal and professional projects spanning mathematics, AI, and software development.
               </p>
-              <p className="font-courier text-md text-gray-500 mt-4">
+              <p className="font-courier text-md text-gray-500 mt-4 border border-dashed border-gray-500 p-2">
                 Coming soon: Detailed project descriptions and demonstrations.
               </p>
             </div>
@@ -45,4 +47,5 @@ const ThoughtsAndProjects = () => {
       </div>
     </div>;
 };
+
 export default ThoughtsAndProjects;
