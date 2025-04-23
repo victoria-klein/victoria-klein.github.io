@@ -50,7 +50,7 @@ const Index = () => {
           <div className="relative h-[400px] -ml-48">
             <div className="absolute left-56 top-16 h-full w-64">
               <div className="absolute left-0 top-0 z-40 mb-4">
-                <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
+                <span className="font-courier text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] bg-[#FFDEE2] font-medium text-base px-[16px] mx-[45px] py-[8px] my-0">
                   Victoria Klein
                 </span>
               </div>
