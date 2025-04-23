@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -44,21 +45,33 @@ const Index = () => {
           </div>
         </motion.div>
       </div>
-      <Avatar 
-        className="absolute bottom-8 left-8 w-24 h-24 border-2 border-primary shadow-lg overflow-visible"
+      <div 
+        className="absolute bottom-8 left-8 w-24 h-24"
         style={{
           clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
-          borderRadius: '0'
+          position: 'relative'
         }}
       >
-        <AvatarImage 
-          src="/placeholder.svg" 
-          alt="Your profile"
-          className="object-cover"
-          style={{ borderRadius: '0' }}
+        <div 
+          className="absolute inset-0 border-2 border-primary"
+          style={{
+            clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
+          }}
         />
-        <AvatarFallback>You</AvatarFallback>
-      </Avatar>
+        <Avatar 
+          className="w-full h-full overflow-hidden"
+          style={{
+            clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
+          }}
+        >
+          <AvatarImage 
+            src="/placeholder.svg" 
+            alt="Your profile"
+            className="object-cover w-full h-full"
+          />
+          <AvatarFallback>You</AvatarFallback>
+        </Avatar>
+      </div>
     </div>
   );
 };
