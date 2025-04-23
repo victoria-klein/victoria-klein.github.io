@@ -1,19 +1,23 @@
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
-
 const Index = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-
-  const links = [
-    { path: '/cv', label: 'CV', rotation: '-2deg' },
-    { path: '/thoughts', label: 'Thoughts', rotation: '-1deg' },
-    { path: '/projects', label: 'Projects', rotation: '2deg' }
-  ];
-
+  const links = [{
+    path: '/cv',
+    label: 'CV',
+    rotation: '-2deg'
+  }, {
+    path: '/thoughts',
+    label: 'Thoughts',
+    rotation: '-1deg'
+  }, {
+    path: '/projects',
+    label: 'Projects',
+    rotation: '2deg'
+  }];
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40 hidden">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
@@ -61,9 +65,7 @@ const Index = () => {
               duration: 0.8,
               delay: 0.4
             }} className="absolute left-[500px] top-16 w-[600px] p-6 border-none bg-transparent">
-                <p className="font-courier text-[#6E59A5] text-left px-0 mx-0">
-                  Hello! I'm a mathematician who loves AI and quirky design
-                </p>
+                <p className="font-courier text-[#6E59A5] text-left px-0 mx-0">I am a machine learning scientist. My academic background is in mathematics and machine learning. I like to build things using the two.</p>
               </motion.div>
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
@@ -81,5 +83,4 @@ const Index = () => {
       </div>
     </div>;
 };
-
 export default Index;
