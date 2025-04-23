@@ -51,8 +51,8 @@ const Index = () => {
       }} transition={{
         duration: 0.8
       }} className="text-left">
-          <div className="relative h-[400px] ml-0">
-            <div className="absolute left-32">
+          <div className="relative h-[400px]">
+            <div className="absolute left-32 h-full w-64">
               <LadderSvg />
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{

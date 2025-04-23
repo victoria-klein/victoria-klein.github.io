@@ -1,6 +1,7 @@
+
 const LadderSvg = () => {
   return (
-    <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" className="absolute left-1/2 -translate-x-1/2 bottom-0 w-1/3 h-auto opacity-20">
+    <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
       <defs>
         <pattern id="woodGrain" patternUnits="userSpaceOnUse" width="100" height="50">
           <path d="M0 0 Q25 10, 50 0 T100 0 M0 25 Q25 35, 50 25 T100 25" stroke="#E5664D" fill="none" strokeWidth="1.5" opacity="0.5"/>
