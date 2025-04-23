@@ -85,7 +85,7 @@ const Index = () => {
               }}>
                 <Link 
                   to={link.path} 
-                  className="inline-block font-courier text-2xl text-primary hover:text-[#ea384c] transition-colors whitespace-pre-line leading-tight px-3 py-2"
+                  className="inline-block font-courier text-2xl text-primary hover:text-[#ea384c] transition-colors whitespace-pre-line leading-tight px-3 py-[55px]"
                 >
                   {link.label}
                 </Link>
