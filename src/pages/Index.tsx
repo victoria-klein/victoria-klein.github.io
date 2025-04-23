@@ -1,10 +1,8 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
-
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
   const text = "Hello! I'm a mathematician who loves AI and quirky design";
@@ -37,7 +35,6 @@ const Index = () => {
     label: 'Projects',
     rotation: '2deg'
   }];
-
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40 hidden">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
@@ -63,40 +60,30 @@ const Index = () => {
               </div>
               <LadderSvg />
               <div className="absolute bottom-20 left-24 w-24 h-24" style={{
-                clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
-                position: 'relative'
-              }}>
+              clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
+              position: 'relative'
+            }}>
                 <Avatar className="w-full h-full overflow-hidden" style={{
-                  clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)'
-                }}>
+                clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)'
+              }}>
                   <AvatarImage src="/lovable-uploads/86d1ae5f-fce3-4935-9fb3-55a67db6a5cb.png" alt="Victoria's profile" className="object-cover w-full h-full" />
                   <AvatarFallback>VK</AvatarFallback>
                 </Avatar>
               </div>
             </div>
-            {links.map((link, index) => (
-              <div 
-                key={link.path} 
-                className="absolute" 
-                style={{
-                  top: `${index * 50 + 80}px`,
-                  left: '300px',
-                  transform: `rotate(${link.rotation})`,
-                  zIndex: 30
-                }}
-              >
-                <Link 
-                  to={link.path} 
-                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-3 py-2"
-                >
+            {links.map((link, index) => <div key={link.path} className="absolute" style={{
+            top: `${index * 50 + 80}px`,
+            left: '300px',
+            transform: `rotate(${link.rotation})`,
+            zIndex: 30
+          }}>
+                <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-3 py-[55px]">
                   {link.label}
                 </Link>
-              </div>
-            ))}
+              </div>)}
           </div>
         </motion.div>
       </div>
     </div>;
 };
-
 export default Index;
