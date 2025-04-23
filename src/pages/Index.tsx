@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -25,7 +24,7 @@ const Index = () => {
   const links = [
     { path: '/about', label: 'About', rotation: '2deg' },
     { path: '/cv', label: 'CV', rotation: '-2deg' },
-    { path: '/thoughts', label: 'Thoughts & \nProjects', rotation: '-1deg' },
+    { path: '/thoughts', label: 'Thoughts & Projects', rotation: '-1deg' },
   ];
 
   return (
@@ -62,7 +61,7 @@ const Index = () => {
               >
                 <Link
                   to={link.path}
-                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors relative max-w-[15%] ml-[42.5%] whitespace-pre-line leading-tight text-left"
+                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors absolute left-[40%] w-[20%] text-center whitespace-pre-line leading-tight"
                   style={{ transform: `rotate(${link.rotation})` }}
                 >
                   {link.label}
