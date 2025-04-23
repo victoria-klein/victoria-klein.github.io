@@ -52,25 +52,35 @@ const Index = () => {
       }} transition={{
         duration: 0.8
       }} className="text-left">
-          <div className="relative h-[400px] -ml-48">
-            <div className="absolute left-56 top-16 h-full w-64">
-              <div className="absolute left-0 top-0 z-40 mb-4">
-                <span className="font-courier text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] bg-[#FFDEE2] font-medium text-base px-[16px] mx-[45px] py-[8px] my-0">
-                  Victoria Klein
-                </span>
-              </div>
-              <LadderSvg />
-              <div className="absolute bottom-20 left-24 w-24 h-24" style={{
-              clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
-              position: 'relative'
-            }}>
-                <Avatar className="w-full h-full overflow-hidden" style={{
-                clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)'
+          <div className="relative h-[400px] -ml-48 flex items-start">
+            <div className="relative h-full w-64">
+              <div className="absolute left-56 top-16 h-full w-64">
+                <div className="absolute left-0 top-0 z-40 mb-4">
+                  <span className="font-courier text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] bg-[#FFDEE2] font-medium text-base px-[16px] mx-[45px] py-[8px] my-0">
+                    Victoria Klein
+                  </span>
+                </div>
+                <LadderSvg />
+                <div className="absolute bottom-20 left-24 w-24 h-24" style={{
+                clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
+                position: 'relative'
               }}>
-                  <AvatarImage src="/lovable-uploads/86d1ae5f-fce3-4935-9fb3-55a67db6a5cb.png" alt="Victoria's profile" className="object-cover w-full h-full" />
-                  <AvatarFallback>VK</AvatarFallback>
-                </Avatar>
+                  <Avatar className="w-full h-full overflow-hidden" style={{
+                  clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)'
+                }}>
+                    <AvatarImage src="/lovable-uploads/86d1ae5f-fce3-4935-9fb3-55a67db6a5cb.png" alt="Victoria's profile" className="object-cover w-full h-full" />
+                    <AvatarFallback>VK</AvatarFallback>
+                  </Avatar>
+                </div>
               </div>
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="absolute left-[400px] top-16 w-[300px] p-6 bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] rounded-lg"
+              >
+                <p className="font-courier text-[#6E59A5]">{displayText}</p>
+              </motion.div>
             </div>
             {links.map((link, index) => (
               <div key={link.path} className="absolute" style={{
