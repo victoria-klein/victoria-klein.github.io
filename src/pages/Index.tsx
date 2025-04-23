@@ -57,7 +57,7 @@ const Index = () => {
                 </span>
               </div>
               <LadderSvg />
-              <div className="absolute bottom-12 left-24 w-24 h-24" style={{
+              <div className="absolute bottom-16 left-24 w-24 h-24" style={{
                 clipPath: 'polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)',
                 position: 'relative'
               }}>
