@@ -1,40 +1,16 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
 
 const Index = () => {
-  const [displayText, setDisplayText] = useState("");
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-  const text = "Hello! I'm a mathematician who loves AI and quirky design";
 
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index < text.length) {
-        setDisplayText(prev => prev + text.charAt(index));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 50);
-    return () => clearInterval(timer);
-  }, []);
-
-  const links = [{
-    path: '/cv',
-    label: 'CV',
-    rotation: '-2deg'
-  }, {
-    path: '/thoughts',
-    label: 'Thoughts',
-    rotation: '-1deg'
-  }, {
-    path: '/projects',
-    label: 'Projects',
-    rotation: '2deg'
-  }];
+  const links = [
+    { path: '/cv', label: 'CV', rotation: '-2deg' },
+    { path: '/thoughts', label: 'Thoughts', rotation: '-1deg' },
+    { path: '/projects', label: 'Projects', rotation: '2deg' }
+  ];
 
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40 hidden">
@@ -83,7 +59,9 @@ const Index = () => {
               duration: 0.8,
               delay: 0.4
             }} className="absolute left-[500px] top-16 w-[600px] p-6 border-none bg-transparent">
-                <p className="font-courier text-[#6E59A5] text-left px-0 mx-0">{displayText}</p>
+                <p className="font-courier text-[#6E59A5] text-left px-0 mx-0">
+                  Hello! I'm a mathematician who loves AI and quirky design
+                </p>
               </motion.div>
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
