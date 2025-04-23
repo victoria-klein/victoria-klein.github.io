@@ -84,13 +84,9 @@ const Index = () => {
               }}>
                 <Link 
                   to={link.path} 
-                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-3 py-[55px] relative group"
+                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-3 py-[55px]"
                 >
-                  <span 
-                    className="absolute inset-0 bg-[#FFDEE2] opacity-0 group-hover:opacity-100 transition-opacity" 
-                    style={{ transform: `rotate(${link.rotation})` }}
-                  />
-                  <span className="relative z-10">{link.label}</span>
+                  {link.label}
                 </Link>
               </div>
             ))}
