@@ -1,7 +1,7 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
   const text = "Hello! I'm a mathematician who loves AI and quirky design";
@@ -19,7 +19,7 @@ const Index = () => {
   }, []);
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40">
-        <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-white">
+        <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-secondary">
           Victoria Klein
         </span>
       </div>
@@ -61,5 +61,5 @@ const Index = () => {
       </div>
     </div>;
 };
-export default Index;
 
+export default Index;
