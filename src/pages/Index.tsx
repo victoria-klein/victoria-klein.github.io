@@ -49,7 +49,7 @@ const Index = () => {
           <p className="font-courier text-lg text-gray-600 mb-12">
             Welcome to my corner of the internet
           </p>
-          <div className="space-y-8">
+          <div className="space-y-4">
             {links.map((link) => (
               <div key={link.path} className="inline-block relative w-full">
                 <span 
@@ -58,7 +58,7 @@ const Index = () => {
                 ></span>
                 <Link
                   to={link.path}
-                  className="relative font-courier text-2xl text-primary hover:text-secondary transition-colors z-10 block py-4"
+                  className="relative font-courier text-2xl text-primary hover:text-secondary transition-colors z-10 block py-2"
                 >
                   {link.label}
                 </Link>
