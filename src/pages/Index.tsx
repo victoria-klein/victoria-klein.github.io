@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
+
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
   const text = "Hello! I'm a mathematician who loves AI and quirky design";
@@ -18,6 +19,7 @@ const Index = () => {
     }, 50);
     return () => clearInterval(timer);
   }, []);
+
   const links = [{
     path: '/about',
     label: 'About',
@@ -28,9 +30,10 @@ const Index = () => {
     rotation: '-2deg'
   }, {
     path: '/thoughts',
-    label: 'Thoughts &\nProjects',
+    label: 'Thoughts / Projects',
     rotation: '-1deg'
   }];
+
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
@@ -53,7 +56,6 @@ const Index = () => {
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
             top: `${index * 50 + 80}px`,
-            // Moved up by 20px
             left: '300px',
             transform: `rotate(${link.rotation})`,
             zIndex: 30
@@ -78,4 +80,5 @@ const Index = () => {
       </div>
     </div>;
 };
+
 export default Index;

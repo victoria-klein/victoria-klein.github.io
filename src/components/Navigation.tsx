@@ -9,7 +9,7 @@ const Navigation = () => {
     { path: '/', label: 'Home', rotation: '-3deg' },
     { path: '/about', label: 'About', rotation: '2deg' },
     { path: '/cv', label: 'CV', rotation: '-2deg' },
-    { path: '/thoughts', label: 'Thoughts & Projects', rotation: '-1deg' },
+    { path: '/thoughts', label: 'Thoughts / Projects', rotation: '-1deg' },
   ];
 
   return (
