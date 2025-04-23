@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
+
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
   const text = "Hello! I'm a mathematician who loves AI and quirky design";
@@ -18,6 +19,7 @@ const Index = () => {
     }, 50);
     return () => clearInterval(timer);
   }, []);
+
   const links = [{
     path: '/about',
     label: 'About',
@@ -31,6 +33,7 @@ const Index = () => {
     label: 'Thoughts &\nProjects',
     rotation: '-1deg'
   }];
+
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
@@ -46,14 +49,11 @@ const Index = () => {
         y: 0
       }} transition={{
         duration: 0.8
-      }} className="text-center">
-          
-          
-          <div className="relative mx-auto h-[400px]">
+      }} className="text-left">
+          <div className="relative h-[400px] ml-32">
             <LadderSvg />
-            {links.map((link, index) => <div key={link.path} className="absolute w-full" style={{
-            top: `${index * 50 + 50}px`,
-            // Move links down by adding 50px offset
+            {links.map((link, index) => <div key={link.path} className="absolute" style={{
+            top: `${index * 50 + 100}px`,
             zIndex: 30
           }}>
                 <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors absolute left-[40%] w-[20%] text-center whitespace-pre-line leading-tight" style={{
@@ -78,4 +78,5 @@ const Index = () => {
       </div>
     </div>;
 };
+
 export default Index;
