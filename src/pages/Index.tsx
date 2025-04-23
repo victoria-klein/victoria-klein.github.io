@@ -29,8 +29,12 @@ const Index = () => {
     rotation: '-2deg'
   }, {
     path: '/thoughts',
-    label: 'Thoughts /\nProjects',
+    label: 'Thoughts',
     rotation: '-1deg'
+  }, {
+    path: '/projects',
+    label: 'Projects',
+    rotation: '2deg'
   }];
 
   return <div className="min-h-screen pt-16 bg-white relative">
@@ -69,16 +73,25 @@ const Index = () => {
                 </Avatar>
               </div>
             </div>
-            {links.map((link, index) => <div key={link.path} className="absolute" style={{
-            top: `${index * 50 + 80}px`,
-            left: '300px',
-            transform: `rotate(${link.rotation})`,
-            zIndex: 30
-          }}>
-                <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-0 py-0 mx-[12px] my-[50px]">
+            {links.map((link, index) => (
+              <div 
+                key={link.path} 
+                className="absolute" 
+                style={{
+                  top: `${index * 50 + 80}px`,
+                  left: '300px',
+                  transform: `rotate(${link.rotation})`,
+                  zIndex: 30
+                }}
+              >
+                <Link 
+                  to={link.path} 
+                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-0 py-0 mx-[12px] my-[50px]"
+                >
                   {link.label}
                 </Link>
-              </div>)}
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
