@@ -28,7 +28,12 @@ const ThoughtsAndProjects = () => {
               <div>
                 <p className="font-courier text-lg text-gray-700 text-left font-normal">Others'</p>
                 <p className="font-courier text-md text-gray-500 mt-2 text-left border border-dashed border-gray-500 p-2 text-sm">
-                  <a href="https://transformer-circuits.pub/" className="underline hover:text-secondary transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href="https://transformer-circuits.pub/" 
+                    className="underline hover:text-[#8B5CF6] transition-colors" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
                     https://transformer-circuits.pub/
                   </a>
                   {" "}I find this blog interesting. I am interested in the distillation of attention outputs
@@ -54,3 +59,4 @@ const ThoughtsAndProjects = () => {
 };
 
 export default ThoughtsAndProjects;
+
