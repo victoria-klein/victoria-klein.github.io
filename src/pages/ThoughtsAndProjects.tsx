@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { motion } from "framer-motion";
+
 const ThoughtsAndProjects = () => {
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="max-w-4xl mx-auto px-4 py-16">
@@ -18,10 +20,15 @@ const ThoughtsAndProjects = () => {
           
           <section className="mb-12">
             <h2 className="font-courier text-2xl text-secondary mb-4">Thoughts</h2>
-            <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-lg">
-              <p className="font-courier text-lg text-gray-700 text-left font-normal">My own</p>
-              <p className="font-courier text-md text-gray-500 mt-4">
-            </p>
+            <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-lg space-y-4">
+              <div className="bg-white border border-[#FF6B6B] p-4 rounded-md">
+                <p className="font-courier text-lg text-gray-700 text-left font-normal">My own</p>
+                <p className="font-courier text-md text-gray-500 mt-2">A space for personal reflections and insights.</p>
+              </div>
+              <div className="bg-white border border-[#FF6B6B] p-4 rounded-md">
+                <p className="font-courier text-lg text-gray-700 text-left font-normal">Emerging Ideas</p>
+                <p className="font-courier text-md text-gray-500 mt-2">Exploring new concepts and perspectives.</p>
+              </div>
             </div>
           </section>
           
@@ -40,4 +47,5 @@ const ThoughtsAndProjects = () => {
       </div>
     </div>;
 };
+
 export default ThoughtsAndProjects;
