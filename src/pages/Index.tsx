@@ -1,9 +1,9 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Stairs } from "lucide-react";
+import { Icon } from "lucide-react";
+import { steps } from "@lucide/lab";
 
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
@@ -50,7 +50,10 @@ const Index = () => {
             Welcome to my corner of the internet
           </p>
           <div className="relative mx-auto w-48 space-y-12">
-            <Stairs className="absolute left-1/2 -translate-x-1/2 h-[400px] w-12 text-[#FF6B6B] opacity-20" />
+            <Icon 
+              iconNode={steps} 
+              className="absolute left-1/2 -translate-x-1/2 h-[400px] w-12 text-[#FF6B6B] opacity-20" 
+            />
             {links.map((link, index) => (
               <div 
                 key={link.path} 
