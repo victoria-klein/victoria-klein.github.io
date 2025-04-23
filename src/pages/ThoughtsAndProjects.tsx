@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { motion } from "framer-motion";
-
 const ThoughtsAndProjects = () => {
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="max-w-4xl mx-auto px-4 py-16">
@@ -27,7 +25,7 @@ const ThoughtsAndProjects = () => {
               </div>
               <div>
                 <p className="font-courier text-lg text-gray-700 text-left font-normal">Others'</p>
-                <p className="font-courier text-md text-gray-500 mt-2 text-left border border-dashed border-gray-500 p-2">https://transformer-circuits.pub/ I find this blog interesting. I am interested in the distillation of attention outputs</p>
+                <p className="font-courier text-md text-gray-500 mt-2 text-left border border-dashed border-gray-500 p-2 text-sm">https://transformer-circuits.pub/ I find this blog interesting. I am interested in the distillation of attention outputs</p>
               </div>
             </div>
           </section>
@@ -47,5 +45,4 @@ const ThoughtsAndProjects = () => {
       </div>
     </div>;
 };
-
 export default ThoughtsAndProjects;
