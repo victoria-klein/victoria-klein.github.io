@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -52,12 +51,12 @@ const Index = () => {
         duration: 0.8
       }} className="text-left">
           <div className="relative h-[400px] -ml-48">
-            <div className="absolute left-32 h-full w-64">
+            <div className="absolute left-40 h-full w-64">
               <LadderSvg />
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
             top: `${index * 50 + 100}px`,
-            left: '250px', // Moved further to the right
+            left: '250px',
             transform: `rotate(${link.rotation})`,
             zIndex: 30
           }}>
@@ -83,4 +82,3 @@ const Index = () => {
 };
 
 export default Index;
-
