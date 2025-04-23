@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from "framer-motion";
 const ThoughtsAndProjects = () => {
@@ -25,8 +24,8 @@ const ThoughtsAndProjects = () => {
                 <p className="font-courier text-md text-gray-500 mt-2 text-left">On scaling</p>
               </div>
               <div>
-                <p className="font-courier text-lg text-gray-700 text-left font-normal">Emerging Ideas</p>
-                <p className="font-courier text-md text-gray-500 mt-2 text-left">Exploring new concepts and perspectives.</p>
+                <p className="font-courier text-lg text-gray-700 text-left font-normal">Others'</p>
+                <p className="font-courier text-md text-gray-500 mt-2 text-left">https://transformer-circuits.pub/ I find this blog interesting. I am interested in the distillation of attention outputs</p>
               </div>
             </div>
           </section>
