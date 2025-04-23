@@ -7,6 +7,7 @@ import LadderSvg from "@/components/LadderSvg";
 
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const text = "Hello! I'm a mathematician who loves AI and quirky design";
 
   useEffect(() => {
@@ -85,7 +86,11 @@ const Index = () => {
               }}>
                 <Link 
                   to={link.path} 
-                  className="inline-block font-courier text-2xl text-primary hover:text-[#ea384c] transition-colors whitespace-pre-line leading-tight px-3 py-[55px]"
+                  className={`inline-block font-courier text-2xl transition-colors whitespace-pre-line leading-tight px-3 py-[55px] ${
+                    hoveredLink === link.path ? 'text-[#ea384c]' : 'text-primary'
+                  }`}
+                  onMouseEnter={() => setHoveredLink(link.path)}
+                  onMouseLeave={() => setHoveredLink(null)}
                 >
                   {link.label}
                 </Link>
