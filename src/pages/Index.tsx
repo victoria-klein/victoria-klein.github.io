@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -41,29 +42,32 @@ const Index = () => {
         </span>
       </div>
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.8
-      }} className="text-left">
-          <div className="relative h-[400px] mt-8">
-            <div className="absolute left-1/2 -translate-x-1/2 h-full w-64">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8 }} 
+          className="text-left"
+        >
+          <div className="relative h-[400px] flex flex-col items-center justify-center">
+            <div className="w-64 mb-8">
               <LadderSvg />
             </div>
-            {links.map((link, index) => <div key={link.path} className="absolute" style={{
-            top: `${index * 50 + 100}px`,
-            left: '50%',
-            transform: `translateX(-50%) rotate(${link.rotation})`,
-            zIndex: 30
-          }}>
-                <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight">
-                  {link.label}
-                </Link>
-              </div>)}
+            <div className="space-y-4">
+              {links.map((link, index) => (
+                <div 
+                  key={link.path} 
+                  className="text-center"
+                  style={{ transform: `rotate(${link.rotation})` }}
+                >
+                  <Link 
+                    to={link.path} 
+                    className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight"
+                  >
+                    {link.label}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
