@@ -3,12 +3,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LadderSvg from "@/components/LadderSvg";
-
 const Index = () => {
   const [displayText, setDisplayText] = useState("");
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const text = "Hello! I'm a mathematician who loves AI and quirky design";
-
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -21,7 +19,6 @@ const Index = () => {
     }, 50);
     return () => clearInterval(timer);
   }, []);
-
   const links = [{
     path: '/cv',
     label: 'CV',
@@ -35,7 +32,6 @@ const Index = () => {
     label: 'Projects',
     rotation: '2deg'
   }];
-
   return <div className="min-h-screen pt-16 bg-white relative">
       <div className="fixed top-16 left-8 z-40 hidden">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
@@ -73,38 +69,32 @@ const Index = () => {
                   </Avatar>
                 </div>
               </div>
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute left-[500px] top-16 w-[300px] p-6 border-none bg-transparent"
-              >
-                <p className="font-courier text-[#6E59A5]">{displayText}</p>
+              <motion.div initial={{
+              opacity: 0,
+              x: 20
+            }} animate={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.4
+            }} className="absolute left-[500px] top-16 w-[300px] p-6 border-none bg-transparent">
+                <p className="font-courier text-[#6E59A5] text-left px-0 mx-0">{displayText}</p>
               </motion.div>
             </div>
-            {links.map((link, index) => (
-              <div key={link.path} className="absolute" style={{
-                top: `${index * 50 + 130}px`,
-                left: '300px',
-                transform: `rotate(${link.rotation})`,
-                zIndex: 30
-              }}>
-                <Link 
-                  to={link.path} 
-                  className={`inline-block font-courier text-2xl transition-colors whitespace-pre-line leading-tight px-3 ${
-                    hoveredLink === link.path ? 'text-[#ea384c]' : 'text-primary'
-                  }`}
-                  onMouseEnter={() => setHoveredLink(link.path)}
-                  onMouseLeave={() => setHoveredLink(null)}
-                >
+            {links.map((link, index) => <div key={link.path} className="absolute" style={{
+            top: `${index * 50 + 130}px`,
+            left: '300px',
+            transform: `rotate(${link.rotation})`,
+            zIndex: 30
+          }}>
+                <Link to={link.path} className={`inline-block font-courier text-2xl transition-colors whitespace-pre-line leading-tight px-3 ${hoveredLink === link.path ? 'text-[#ea384c]' : 'text-primary'}`} onMouseEnter={() => setHoveredLink(link.path)} onMouseLeave={() => setHoveredLink(null)}>
                   {link.label}
                 </Link>
-              </div>
-            ))}
+              </div>)}
           </div>
         </motion.div>
       </div>
     </div>;
 };
-
 export default Index;
