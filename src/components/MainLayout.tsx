@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -45,7 +44,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
                 className="absolute"
                 style={{
                   top: `${index * 50 + 130}px`,
-                  left: '280px', // Changed from 250px to 280px to move links further right
+                  left: '310px',
                   transform: `rotate(${link.rotation})`,
                   zIndex: 30
                 }}
