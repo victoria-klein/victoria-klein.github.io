@@ -52,12 +52,12 @@ const Index = () => {
         duration: 0.8
       }} className="text-left">
           <div className="relative h-[400px] -ml-48">
-            <div className="absolute left-48 h-full w-64">
+            <div className="absolute left-52 h-full w-64">
               <LadderSvg />
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
             top: `${index * 50 + 100}px`,
-            left: '280px',
+            left: '300px',
             transform: `rotate(${link.rotation})`,
             zIndex: 30
           }}>
