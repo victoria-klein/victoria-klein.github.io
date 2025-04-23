@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -53,7 +54,7 @@ const Index = () => {
             {links.map((link, index) => (
               <div 
                 key={link.path} 
-                className="absolute w-full text-center"
+                className="absolute w-full"
                 style={{
                   bottom: `${index * 120 + 50}px`,
                   zIndex: 30
@@ -61,7 +62,7 @@ const Index = () => {
               >
                 <Link
                   to={link.path}
-                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors relative max-w-[15%] mx-auto whitespace-pre-line leading-tight"
+                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors relative max-w-[15%] ml-[42.5%] whitespace-pre-line leading-tight text-left"
                   style={{ transform: `rotate(${link.rotation})` }}
                 >
                   {link.label}
