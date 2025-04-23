@@ -82,7 +82,7 @@ const Index = () => {
             }} transition={{
               duration: 0.8,
               delay: 0.4
-            }} className="absolute left-[500px] top-16 w-[400px] p-6 border-none bg-transparent">
+            }} className="absolute left-[500px] top-16 w-[600px] p-6 border-none bg-transparent">
                 <p className="font-courier text-[#6E59A5] text-left px-0 mx-0">{displayText}</p>
               </motion.div>
             </div>
