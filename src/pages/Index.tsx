@@ -51,14 +51,14 @@ const Index = () => {
           </p>
           <div className="space-y-4">
             {links.map((link) => (
-              <div key={link.path} className="inline-block relative w-full">
+              <div key={link.path} className="inline-block relative w-auto">
                 <span 
-                  className="absolute inset-0 bg-secondary opacity-20"
-                  style={{ transform: `rotate(${link.rotation})` }}
+                  className="absolute inset-0 bg-secondary opacity-20 w-3/4 left-1/2 -translate-x-1/2"
+                  style={{ transform: `rotate(${link.rotation}) translate(-50%, 0)` }}
                 ></span>
                 <Link
                   to={link.path}
-                  className="relative font-courier text-2xl text-primary hover:text-secondary transition-colors z-10 block py-2"
+                  className="relative font-courier text-2xl text-primary hover:text-secondary transition-colors z-10 block py-2 text-center"
                 >
                   {link.label}
                 </Link>
@@ -83,3 +83,4 @@ const Index = () => {
 };
 
 export default Index;
+
