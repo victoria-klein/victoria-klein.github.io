@@ -8,23 +8,12 @@ import LadderSvg from "@/components/LadderSvg";
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   
-  const links = [{
-    path: '/',
-    label: 'Home',
-    rotation: '-3deg'
-  }, {
-    path: '/cv',
-    label: 'CV',
-    rotation: '-2deg'
-  }, {
-    path: '/thoughts',
-    label: 'Thoughts',
-    rotation: '-1deg'
-  }, {
-    path: '/projects',
-    label: 'Projects',
-    rotation: '2deg'
-  }];
+  const links = [
+    { path: '/', label: 'Home', rotation: '-3deg' },
+    { path: '/cv', label: 'CV', rotation: '-2deg' },
+    { path: '/thoughts', label: 'Thoughts', rotation: '-1deg' },
+    { path: '/projects', label: 'Projects', rotation: '2deg' }
+  ];
 
   return (
     <div className="min-h-screen pt-16 bg-white relative">
@@ -50,30 +39,30 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
                 </Avatar>
               </div>
             </div>
-          </div>
-          {links.map((link, index) => (
-            <div
-              key={link.path}
-              className="absolute"
-              style={{
-                top: `${index * 50 + 130}px`,
-                left: '220px',
-                transform: `rotate(${link.rotation})`,
-                zIndex: 30
-              }}
-            >
-              <Link
-                to={link.path}
-                className={`inline-block font-courier text-2xl transition-colors whitespace-pre-line leading-tight px-3 ${hoveredLink === link.path ? 'text-[#ea384c]' : 'text-primary'}`}
-                onMouseEnter={() => setHoveredLink(link.path)}
-                onMouseLeave={() => setHoveredLink(null)}
+            {links.map((link, index) => (
+              <div
+                key={link.path}
+                className="absolute"
+                style={{
+                  top: `${index * 50 + 130}px`,
+                  left: '250px', // Changed from 220px to 250px to move links to the right
+                  transform: `rotate(${link.rotation})`,
+                  zIndex: 30
+                }}
               >
-                {link.label}
-              </Link>
+                <Link
+                  to={link.path}
+                  className={`inline-block font-courier text-2xl transition-colors whitespace-pre-line leading-tight px-3 ${hoveredLink === link.path ? 'text-[#ea384c]' : 'text-primary'}`}
+                  onMouseEnter={() => setHoveredLink(link.path)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                >
+                  {link.label}
+                </Link>
+              </div>
+            ))}
+            <div className="absolute left-[500px] top-16">
+              {children}
             </div>
-          ))}
-          <div className="absolute left-[500px] top-16">
-            {children}
           </div>
         </div>
       </div>
