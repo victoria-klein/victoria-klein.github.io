@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -45,7 +44,12 @@ const Index = () => {
           </div>
         </motion.div>
       </div>
-      <Avatar className="absolute bottom-8 left-8 w-24 h-24 border-2 border-primary shadow-lg">
+      <Avatar 
+        className="absolute bottom-8 left-8 w-24 h-24 border-2 border-primary shadow-lg"
+        style={{
+          clipPath: 'polygon(50% 0%, 80% 20%, 100% 50%, 80% 80%, 50% 100%, 20% 80%, 0% 50%, 20% 20%)'
+        }}
+      >
         <AvatarImage 
           src="/placeholder.svg" 
           alt="Your profile"
