@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -70,7 +71,7 @@ const Index = () => {
             transform: `rotate(${link.rotation})`,
             zIndex: 30
           }}>
-                <Link to={link.path} className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors whitespace-pre-line leading-tight px-0 py-0 mx-[12px] my-[50px]">
+                <Link to={link.path} className="inline-block font-courier text-2xl text-[#6E59A5] hover:text-[#9b87f5] transition-colors whitespace-pre-line leading-tight px-0 py-0 mx-[12px] my-[50px]">
                   {link.label}
                 </Link>
               </div>)}
