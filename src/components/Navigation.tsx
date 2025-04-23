@@ -28,8 +28,8 @@ const Navigation = () => {
                   to={link.path}
                   className={cn(
                     "relative font-courier px-3 py-2 text-sm transition-colors z-10",
-                    "hover:text-[#9b87f5]",
-                    hoveredLink === link.path ? "text-[#9b87f5]" : "text-[#6E59A5]"
+                    "hover:text-secondary",
+                    hoveredLink === link.path ? "text-secondary" : "text-primary"
                   )}
                   onMouseEnter={() => setHoveredLink(link.path)}
                   onMouseLeave={() => setHoveredLink(null)}
