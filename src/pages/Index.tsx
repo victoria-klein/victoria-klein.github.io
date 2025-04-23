@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -77,7 +78,7 @@ const Index = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute left-[400px] top-16 w-[300px] p-6 bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] rounded-lg"
+                className="absolute left-[500px] top-16 w-[300px] p-6 bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] rounded-lg"
               >
                 <p className="font-courier text-[#6E59A5]">{displayText}</p>
               </motion.div>
