@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -35,7 +36,7 @@ const Index = () => {
   }];
 
   return <div className="min-h-screen pt-16 bg-white relative">
-      <div className="fixed top-16 left-8 z-40">
+      <div className="fixed top-16 left-8 z-40 hidden">
         <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
           Victoria Klein
         </span>
@@ -51,7 +52,12 @@ const Index = () => {
         duration: 0.8
       }} className="text-left">
           <div className="relative h-[400px] -ml-48">
-            <div className="absolute left-56 h-full w-64">
+            <div className="absolute left-56 top-16 h-full w-64">
+              <div className="absolute left-0 top-0 z-40 mb-4">
+                <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2 bg-[#FFDEE2]">
+                  Victoria Klein
+                </span>
+              </div>
               <LadderSvg />
             </div>
             {links.map((link, index) => <div key={link.path} className="absolute" style={{
