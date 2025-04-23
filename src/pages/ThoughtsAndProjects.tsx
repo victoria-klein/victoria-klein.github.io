@@ -22,11 +22,15 @@ const ThoughtsAndProjects = () => {
             <h2 className="font-courier text-2xl text-secondary mb-4 text-left">Thoughts</h2>
             <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-none space-y-4">
               <div>
+                <p className="font-courier text-lg text-gray-700 text-left font-normal">My own</p>
+                <p className="font-courier text-md text-gray-500 mt-2 text-left border border-dashed border-gray-500 p-2">On scaling</p>
+              </div>
+              <div>
                 <p className="font-courier text-lg text-gray-700 text-left font-normal">Others'</p>
                 <p className="font-courier text-md text-gray-500 mt-2 text-left border border-dashed border-gray-500 p-2 text-sm">
                   <a 
                     href="https://transformer-circuits.pub/" 
-                    className="underline text-[#1A1F2C] hover:text-[#8B5CF6] transition-colors" 
+                    className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
