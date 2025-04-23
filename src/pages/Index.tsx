@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -22,6 +23,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen pt-16 bg-white relative">
+      <div className="absolute top-8 left-8">
+        <span className="font-courier text-2xl text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] px-4 py-2">
+          Victoria Klein
+        </span>
+      </div>
       <div className="max-w-4xl mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
