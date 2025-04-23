@@ -1,11 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Index = () => {
+  const [displayText, setDisplayText] = useState("");
+  const text = "Hello! I'm a mathematician who loves AI and quirky design";
+  
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index < text.length) {
+        setDisplayText((prev) => prev + text.charAt(index));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 50);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen pt-16 bg-white">
+      <div className="max-w-4xl mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <h1 className="font-courier text-4xl md:text-6xl text-primary mb-8">
+            {displayText}
+            <span className="animate-pulse">|</span>
+          </h1>
+          <p className="font-courier text-lg text-gray-600 mb-8">
+            Welcome to my corner of the internet
+          </p>
+          <div className="inline-block relative">
+            <span className="absolute inset-0 bg-secondary opacity-20 transform rotate-3"></span>
+            <span className="relative font-courier text-primary px-4 py-2">
+              Let's explore together
+            </span>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
