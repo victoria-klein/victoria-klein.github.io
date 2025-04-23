@@ -24,7 +24,7 @@ const Index = () => {
   const links = [
     { path: '/about', label: 'About', rotation: '2deg' },
     { path: '/cv', label: 'CV', rotation: '-2deg' },
-    { path: '/thoughts', label: 'Thoughts & Projects', rotation: '-1deg' },
+    { path: '/thoughts', label: 'Thoughts & \nProjects', rotation: '-1deg' },
   ];
 
   return (
@@ -61,7 +61,7 @@ const Index = () => {
               >
                 <Link
                   to={link.path}
-                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors relative max-w-[15%] mx-auto overflow-hidden whitespace-nowrap text-ellipsis"
+                  className="inline-block font-courier text-2xl text-primary hover:text-secondary transition-colors relative max-w-[15%] mx-auto whitespace-pre-line leading-tight"
                   style={{ transform: `rotate(${link.rotation})` }}
                 >
                   {link.label}
