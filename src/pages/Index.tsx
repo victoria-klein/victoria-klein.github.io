@@ -48,9 +48,7 @@ const Index = () => {
         duration: 0.8
       }} className="text-center">
           
-          <p className="font-courier text-lg text-gray-600 mb-12">
-            Welcome to my corner of the internet
-          </p>
+          
           <div className="relative mx-auto h-[400px]">
             <LadderSvg />
             {links.map((link, index) => <div key={link.path} className="absolute w-full" style={{
