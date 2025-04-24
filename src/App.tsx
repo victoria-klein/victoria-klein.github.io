@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,18 +10,18 @@ import Thoughts from "./pages/Thoughts";
 import Projects from "./pages/Projects";
 import CV from "./pages/CV";
 
+// Hot reloading demo - this comment will appear instantly in your browser
 const queryClient = new QueryClient();
 
 const AppContent = () => {
   const location = useLocation();
-  
+
   return (
     <div className="min-h-screen w-full">
-      {location.pathname !== '/' && 
-       location.pathname !== '/cv' && 
-       location.pathname !== '/thoughts' && 
-       location.pathname !== '/projects' && 
-       <Navigation />}
+      {location.pathname !== "/" &&
+        location.pathname !== "/cv" &&
+        location.pathname !== "/thoughts" &&
+        location.pathname !== "/projects" && <Navigation />}
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/cv" element={<CV />} />
