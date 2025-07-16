@@ -1,9 +1,14 @@
 import MainLayout from "@/components/MainLayout";
+import { useWhiteMode } from "@/contexts/WhiteModeContext";
 
 const Projects = () => {
+  const { getBackgroundClass } = useWhiteMode();
+
   return (
     <MainLayout>
-      <div className="bg-[#FFDEE2] border-2 border-dashed border-[#FF6B6B] p-6 rounded-none w-[600px]">
+      <div
+        className={`${getBackgroundClass()} border-2 border-dashed border-[#FF6B6B] p-6 rounded-none w-full`}
+      >
         <p className="font-courier text-sm text-gray-700">
           My personal projects/tooling are (mainly) a product of curiosity
           (sometimes necessity) and my work at the time.
@@ -48,70 +53,6 @@ const Projects = () => {
           Flax's NNX package in early 2024. Inspired in part by Equinox, I ended
           up (accidentally) writing a tool for synthesizing JAX NNX graphs from
           PyTreeDefs, an example of stateless ML tooling at its best.
-        </p>
-        <br />
-        <p className="font-courier text-sm text-gray-700">
-          Bonus,
-          <br />
-          packages that I like:
-          <br />
-          <div className="space-y-1">
-            <div className="flex gap-4">
-              <span className="w-24">
-                <a
-                  href="https://flax.readthedocs.io/en/v0.8.3/experimental/nnx/index.html"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  NNX
-                </a>
-              </span>
-              <span>(Flax, JAX) Stateless to a tee</span>
-            </div>
-            <div className="flex gap-4">
-              <span className="w-24">
-                <a
-                  href="https://docs.kidger.site/equinox/"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  Equinox
-                </a>
-              </span>
-              <span>(JAX) PyTree nn Modules</span>
-            </div>
-            <div className="flex gap-4">
-              <span className="w-24">
-                <a
-                  href="https://pytorch.org/blog/flexattention/"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  FlexAttention
-                </a>
-              </span>
-              <span>(PyTorch) Customisable Flash-like performance</span>
-            </div>
-            <div className="flex gap-4">
-              <span className="w-24">
-                <a
-                  href="https://lightning.ai/docs/pytorch/stable/"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  Lightning
-                </a>
-              </span>
-              <span>(PyTorch)</span>
-            </div>
-            <div className="flex gap-4">
-              <span className="w-24">
-                <a
-                  href="https://symbolica.io/"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  Symbolica
-                </a>
-              </span>
-              <span>CUDA-accelerated computer algebra</span>
-            </div>
-          </div>
         </p>
       </div>
     </MainLayout>

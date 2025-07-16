@@ -1,11 +1,12 @@
+import LadderSvg from "@/components/LadderSvg";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useWhiteMode } from "@/contexts/WhiteModeContext";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import LadderSvg from "@/components/LadderSvg";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const { isWhiteMode, toggleWhiteMode, getBackgroundClass } = useWhiteMode();
   
   const links = [
     { path: '/', label: 'Home', rotation: '-3deg' },
@@ -16,12 +17,19 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="min-h-screen pt-16 bg-white relative">
+      {/* White Mode Toggle Button */}
+      <button
+        onClick={toggleWhiteMode}
+        className="fixed top-48 right-8 z-50 px-4 py-2 border-2 border-dashed border-[#FF6B6B] bg-[#FFDEE2] hover:bg-[#FFB6C1] font-courier text-sm text-[#6E59A5] transition-colors"
+      >
+        {isWhiteMode ? 'colour' : 'plain'}
+      </button>
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="relative h-[400px] -ml-48 flex items-start">
+        <div className="fixed h-[400px] -ml-48">
           <div className="relative h-full w-64">
             <div className="absolute left-56 top-16 h-full w-64">
               <div className="absolute left-0 top-0 z-40 mb-4">
-                <span className="font-courier text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] bg-[#FFDEE2] font-medium text-base px-[16px] mx-[45px] py-[8px] my-0">
+                <span className={`font-courier text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] ${getBackgroundClass()} font-medium text-base px-[16px] mx-[45px] py-[8px] my-0`}>
                   Victoria Klein
                 </span>
               </div>
@@ -59,11 +67,16 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
                 </Link>
               </div>
             ))}
-            <div className="absolute left-[500px] top-16">
-              {children}
-            </div>
           </div>
         </div>
+      </div>
+      {/* Scrollable content area - outside fixed navigation */}
+      <div className="flex">
+        <div className="w-[500px] flex-shrink-0"></div>
+        <div className="flex-1 px-8">
+          {children}
+        </div>
+        <div className="w-32 flex-shrink-0"></div>
       </div>
     </div>
   );
