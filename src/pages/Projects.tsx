@@ -11,25 +11,24 @@ const Projects = () => {
       >
         <p className="font-courier text-sm text-gray-700">
           My personal projects/tooling are (mainly) a product of curiosity
-          (sometimes necessity) and my work at the time.
+          (sometimes necessity) and my work at the time. Reach out for access!
           <br />
-          After a healthy stretch of time on my local machine, some have made
-          their way to GitHub.
         </p>
         <p className="font-courier text-sm text-gray-500 mt-4 border border-dashed border-gray-500 p-2">
           <span className="font-bold">
-            * JAX/NumPy implementation of the{" "}
-            <a
-              href="https://www.cs.columbia.edu/~andoni/papers/learnpoly.pdf"
-              className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Growing Basis Algorithm
-            </a>
+            * JAX/NumPy implementation of the Growing Basis Algorithm
           </span>{" "}
           <br />
-          The Growing Basis Algorithm caught my attention after reading this{" "}
+          The{" "}
+          <a
+            href="https://www.cs.columbia.edu/~andoni/papers/learnpoly.pdf"
+            className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Growing Basis Algorithm
+          </a>{" "}
+          caught my attention after reading a{" "}
           <a
             href="https://arxiv.org/abs/2401.01869"
             className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"

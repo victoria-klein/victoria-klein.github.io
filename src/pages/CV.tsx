@@ -10,7 +10,7 @@ const CV = () => {
       <div
         className={`${getBackgroundClass()} border-2 border-dashed border-[#FF6B6B] p-6 rounded-none w-full tracking-tighter`}
       >
-        <div className="flex justify-end gap-2">
+        {/* <div className="flex justify-end gap-2">
           <p className="font-courier text-md text-gray-700 font-bold">
             <a
               href="/victoria-klein-cv.pdf"
@@ -21,8 +21,11 @@ const CV = () => {
               PDF
             </a>
           </p>
-        </div>
-        <div className="flex justify-end gap-2">
+        </div> */}
+        <div className="flex justify-end gap-1">
+          <div className="text-right font-courier text-sm">
+            Reach out via: 
+          </div>
           <div className="text-right font-courier text-sm">
             <a
               href="https://linkedin.com/in/victoria--klein"
@@ -53,13 +56,13 @@ const CV = () => {
           </div>
           <FaGithub className="w-5 h-5 text-[#8B5CF6]" />
         </div>
-        <br />
+        {/* <br />
         <p className="font-courier text-md text-gray-700 font-bold">
           Experience
         </p>
         <p className="font-courier text-sm text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
           <span className="font-bold">
-            ML scientist,{" "}
+            AI Researcher <br />
             <a
               href="https://www.symbolica.ai"
               className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
@@ -70,25 +73,41 @@ const CV = () => {
             </a>
           </span>{" "}
           <div className="flex justify-between w-full">
-            <span>🗓️ Sep 2024 - </span>
-            <span>London, UK 📍</span>
+            <span className="font-bold">🗓️ Jun 2025 - </span>
+            <span className="font-bold">London, UK 📍</span>
           </div>
           <span className="text-xs">
-            * Helped come up with and pitch Symbolica's first product, Agentica,
-            a lightweight and expressive framework for agents as programmers
-            <br />
-            * Developed the constrained decoding and prompt engineering for
-            Agentica
-            <br />
-            * Part of an internal special projects group working day-to-day with
-            the CPO
-            <br />* Worked on large scale distributed training on H100s and
-            evals of code synthesis models (Torch, JAX, Pallas)
+            * Proposed, co-led and built a protocol and frameworkfor building
+            and deploying "code mode" agents (see{" "}
+            <a
+              href="https://blog.cloudflare.com/code-mode/"
+              className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+            >
+              here
+            </a>{" "}
+            for similar), SDK (Python & TypeScript) in beta to be released
+            publicly in November 2025
+            <br />* Protocol extended MCP to enable RPC with arbitrary objects
+            in an execution environment
+            <br />* Significant contribution to product research, ideation and
+            de-risking, working day-to-day with the CPO
+          </span>
+          <div className="flex justify-between w-full">
+            <span className="font-bold">🗓️ Sep 2024 - Jun 2025</span>
+            <span className="font-bold"></span>
+          </div>
+          <span className="text-xs">
+            * Theoretical and experimental research into language model
+            architectures and constrained decoding
+            <br />* Trained and evaluated O(100M) to O(1B) scale models on large
+            scale distributed GPU infrastructure
+            <br />* Designed and implemented in-house model training and
+            evaluation frameworks
           </span>
         </p>
         <p className="font-courier text-sm text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
           <span className="font-bold">
-            Visiting researcher,{" "}
+            Visiting Researcher <br />
             <a
               href="https://ivi.fnwi.uva.nl/quva/index.html"
               className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
@@ -100,10 +119,19 @@ const CV = () => {
             , University of Amsterdam
           </span>{" "}
           <div className="flex justify-between w-full">
-            <span>🗓️ Jan 2023 - Aug 2023</span>
-            <span>Amsterdam, NL 📍</span>
+            <span className="font-bold">🗓️ Jan 2023 - Aug 2023</span>
+            <span className="font-bold">Amsterdam, NL 📍</span>
           </div>
-          <br />* Visiting researcher * Paper went to ICML 2023
+          <span className="text-xs">
+            * 6 month research visit under{" "}
+            <a
+              href="http://www.egavves.com/"
+              className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+            >
+              Efstratios Gavves
+            </a>{" "}
+            culminating in a poster at ICML 2023
+          </span>
         </p>
         <br />
         <p className="font-courier text-md text-gray-700 font-bold">
@@ -122,13 +150,13 @@ const CV = () => {
           <div className="tracking-tightest">
             <span className="font-bold">Programming languages: </span>
             <span className="tracking-tightest">
-              Python (2015- ) | Haskell, C++ (2015-2017)
+              Python (2015- ) | TypeScript (2025- ) | Haskell, C++ (2015-2017)
             </span>
           </div>
           <div className="tracking-tightest">
             <span className="font-bold">Additional skills: </span>
             <span className="tracking-tightest">
-              SLURM cluster (2022-2023) | git (2024- ) | Pallas (2024- ){" "}
+              SLURM (2022-2023) | Pallas (2024- ){" "}
             </span>
           </div>
         </p>
@@ -138,12 +166,13 @@ const CV = () => {
         </p>
         <p className="font-courier text-sm text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
           <span className="font-bold">
-            PhD Candidate in Mathematics, Imperial College London
+            PhD Candidate in Mathematics <br />
+            Imperial College London
           </span>{" "}
           <br />
           <div className="flex justify-between w-full">
-            <span>🗓️ Nov 2019 - Aug 2024 </span>
-            <span>London, UK 📍</span>
+            <span className="font-bold">🗓️ Nov 2019 - Aug 2024 </span>
+            <span className="font-bold">London, UK 📍</span>
           </div>
           <span className="text-xs tracking-tighter">
             * PhD advisors:{" "}
@@ -160,10 +189,6 @@ const CV = () => {
             >
               Dr Kevin N. Webster
             </a>
-            <br />
-            * My research focused on using generating sets of equivariants to
-            parameterise equivariant neural networks, using advanced
-            computational algebra with DL frameworks
             <br />* Part of the{" "}
             <a
               href="https://www.randomsystems-cdt.ac.uk/"
@@ -171,16 +196,22 @@ const CV = () => {
             >
               EPSRC CDT for Mathematics of Random Systems
             </a>
+            <br />* Theoretical and experimental research into using generating
+            sets of algebraic equivariants to parameterise Equivariant Neural
+            Networks for Lie groups
+            <br />* Optimising and scaling advanced computational algebra
+            algorithms for large scale GPU infrastructure
           </span>
         </p>
         <p className="font-courier text-sm text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
           <span className="font-bold">
-            MSc in Mathematics, Imperial College London
+            MSc in Mathematics <br />
+            Imperial College London
           </span>{" "}
           <br />
           <div className="flex justify-between w-full">
-            <span>🗓️ Nov 2018 - Aug 2020 </span>
-            <span>London, UK 📍</span>
+            <span className="font-bold">🗓️ Nov 2018 - Aug 2020 </span>
+            <span className="font-bold">London, UK 📍</span>
           </div>
           <span className="text-xs tracking-tighter">
             * 1st Class Honours, 83% average
@@ -190,22 +221,70 @@ const CV = () => {
         </p>
         <p className="font-courier text-sm text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
           <span className="font-bold">
-            BSc in Mathematics and Computer Science, Durham University
+            BSc in Mathematics and Computer Science <br />
+            Durham University
           </span>{" "}
           <br />
           <div className="flex justify-between w-full">
-            <span>🗓️ Oct 2015 - Aug 2018 </span>
-            <span>Durham, UK 📍</span>
+            <span className="font-bold">🗓️ Oct 2015 - Aug 2018 </span>
+            <span className="font-bold">Durham, UK 📍</span>
           </div>
           <span className="text-xs tracking-tighter">* 1st Class Honours</span>
         </p>
         <br />
 
+        <p className="font-courier text-md text-gray-700 font-bold">Projects</p>
+        <p className="font-courier text-xs text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
+          <span className="font-bold">Personal</span>
+          <br />
+          <a
+            href="https://victoria-klein.github.io/projects"
+            className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+          >
+            victoria-klein.github.io/projects
+          </a>
+          <br />
+          <br />
+          <span className="font-bold">Teaching</span>
+          <br />* Graduate tutorials in DL (2021, 2022 & 2023), Imperial
+          <br />* Undergraduate courses in differential equations (2022) and
+          calculus (2021), Imperial
+          <br />
+          <br />
+          <span className="font-bold">Other</span>
+          <br />* Code First Girls Fellow (2020)
+          <br />* Regular attendance at{" "}
+          <a
+            href="https://aitinkerers.org/p/welcome"
+            className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+          >
+            AI Tinkerers
+          </a>{" "}
+          events
+          <br />* Committee member, WomenInStem@IC Society (2020) | Postgraduate
+          representative, Women in Maths Society, Imperial College London (2021)
+        </p>
+        <br />
+
+        <p className="font-courier text-md text-gray-700 font-bold">Awards</p>
+        <p className="font-courier text-xs text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
+          <span className="font-bold">2022 🗓️</span>
+          <div className="flex justify-between w-full">
+            <span>* Dorris Chen Award</span>
+            <span>Department of Mathematics, Imperial College London</span>
+          </div>
+          <div className="flex justify-between w-full">
+            <span>* The Fields’ Institute Travel Grant</span>
+            <span>The Fields’ Institute </span>
+          </div>
+        </p>
+        <br />
+
         <p className="font-courier text-md text-gray-700 font-bold">
-          Invitations
+          Publications
         </p>
         <p className="font-courier text-sm text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
-          <span className="text-xs">🗓️ 2023</span>
+          <span className="text-xs font-bold">🗓️ 2023</span>
           <div className="flex justify-between w-full">
             <span className="font-normal">
               * ICML, Workshop on Topology, Algebra and Geometry in Machine
@@ -256,36 +335,15 @@ const CV = () => {
             </sup>
           </span>
           <br />
-          <span className="text-xs">🗓️ 2020 & 2021</span>
+          <br />
+          <span className="text-xs font-bold">🗓️ 2020 & 2021</span>
           <br />
           <span className="font-normal">
-            * Mary Lister McCammon Fellowship Talk, Imperial College
-            London{" "}
+            * Mary Lister McCammon Fellowship Talk, Imperial College London{" "}
           </span>
         </p>
+        <br />
 
-        <br />
-        <p className="font-courier text-md text-gray-700 font-bold">Awards</p>
-        <p className="font-courier text-xs text-gray-700 mt-4 border border-dashed border-gray-700 p-2">
-          <div className="flex justify-between w-full">
-            <span>Department of Mathematics, Imperial College London</span>
-            <span>London, UK 📍</span>
-          </div>
-          <div className="flex justify-between w-full">
-            <span className="italic">Dorris Chen Award</span>
-            <span>2022 🗓️</span>
-          </div>
-          <br />
-          <div className="flex justify-between w-full">
-            <span>The Fields’ Institute </span>
-            <span>Toronto, ON 📍</span>
-          </div>
-          <div className="flex justify-between w-full">
-            <span className="italic">The Fields’ Institute Travel Grant</span>
-            <span>2022 🗓️</span>
-          </div>
-        </p>
-        <br />
         <span className="font-courier text-md text-gray-700 font-bold">
           Other{" "}
         </span>
@@ -315,7 +373,7 @@ const CV = () => {
               <span>Summer 2013 🗓️</span>
             </div>
           </p>
-        </p>
+        </p> */}
       </div>
     </MainLayout>
   );

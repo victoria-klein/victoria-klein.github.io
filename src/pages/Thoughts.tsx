@@ -11,12 +11,28 @@ const Thoughts = () => {
       >
         <div>
           <p className="font-courier text-md text-gray-700 text-left font-bold">
-            My own
+            Packages
           </p>
           <p className="font-courier text-sm text-gray-700 mt-2 text-left border border-dashed border-gray-700 p-2">
-            <span className="underline">Packages that I like: </span>
-            <br />
             <div className="grid grid-cols-[230px_1fr] gap-4 gap-y-1">
+              <span>
+                <a
+                  href="https://github.com/guidance-ai/guidance"
+                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+                >
+                  guidance
+                </a>{" "}
+              </span>
+              <span>Constrained generation meets CFGs</span>
+              <span>
+                <a
+                  href="https://dspy.ai/"
+                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+                >
+                  DSPy
+                </a>
+              </span>
+              <span>Prompts as programs</span>
               <span>
                 <a
                   href="https://flax.readthedocs.io/en/v0.8.3/experimental/nnx/index.html"
@@ -58,16 +74,6 @@ const Thoughts = () => {
                 </a>
               </span>
               <span>CUDA-accelerated computer algebra</span>
-
-              <span>
-                <a
-                  href="https://dspy.ai/"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  DSPy
-                </a>
-              </span>
-              <span>Prompts as programs</span>
             </div>
             {/* <p className="font-courier text-sm text-gray-700 text-left font-normal underline">Books that I've enjoyed:</p>
           <p className="font-courier text-gray-700 mt-2 text-left text-sm">
@@ -79,11 +85,28 @@ const Thoughts = () => {
         </div>
         <div>
           <p className="font-courier text-md text-gray-700 text-left font-bold">
-            Others'
+            Blogs/posts
           </p>
           <br />
           <p className="font-courier text-md text-gray-700 text-left italic">
             2025
+          </p>
+          <p className="font-courier text-md text-gray-700 mt-2 text-left border border-dashed border-gray-700 p-2 text-sm">
+            <span className="font-bold">* </span>
+            <a
+              href="https://blog.cloudflare.com/code-mode/"
+              className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Code Mode: the better way to use MCP
+            </a>{" "}
+            <br />
+            <span className=" tracking-tighter">
+              A blog post by Cloudflare on giving LLMs access to MCP servers via
+              an execution environment and the broader point of tool calling via
+              code.
+            </span>
           </p>
           <p className="font-courier text-md text-gray-700 mt-2 text-left border border-dashed border-gray-700 p-2 text-sm">
             <span className="font-bold">* </span>
@@ -124,7 +147,7 @@ const Thoughts = () => {
               </a>{" "}
               Discord server, (a great resource for interesting discussions on
               high-level (Torch, JAX) and low-level (CUDA) GPU programming and
-              debugging). I mostly use it tokeep up to date with{" "}
+              debugging). I mostly use it to keep up to date with{" "}
               <a
                 href="https://gpu-mode.github.io/popcorn/"
                 className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
