@@ -123,3 +123,8 @@
   background-repeat: repeat-x;
   z-index: 1;
 }
+
+@media (max-width: 639px) {
+  .notepad { margin-top: 20px; }
+  .notepad::before { height: 20px; top: -20px; background-size: auto 20px; }
+}

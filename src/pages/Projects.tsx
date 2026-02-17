@@ -4,7 +4,7 @@ const Projects = () => {
   return (
     <MainLayout>
       <div
-        className="notepad p-8 w-full relative"
+        className="notepad p-4 sm:p-8 w-full relative"
       >
         <p className="font-courier text-sm text-gray-700">
           My personal projects/tooling are (mainly) a product of curiosity

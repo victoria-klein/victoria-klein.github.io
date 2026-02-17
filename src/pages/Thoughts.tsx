@@ -4,7 +4,7 @@ const Thoughts = () => {
   return (
     <MainLayout>
       <div
-        className="notepad p-8 w-full space-y-4 relative"
+        className="notepad p-4 sm:p-8 w-full space-y-4 relative"
       >
         <div>
           <p className="font-courier text-md text-gray-700 text-left font-bold">
@@ -171,7 +171,7 @@ const Thoughts = () => {
             Packages I like
           </p>
           <p className="font-courier text-sm text-gray-700 mt-2 text-left border border-dashed border-gray-700 p-2">
-            <div className="grid grid-cols-[230px_1fr] gap-4 gap-y-1">
+            <div className="grid grid-cols-[auto_1fr] sm:grid-cols-[230px_1fr] gap-4 gap-y-1">
               <span>
                 <a
                   href="https://github.com/symbolica-ai/agentica-python-sdk"
