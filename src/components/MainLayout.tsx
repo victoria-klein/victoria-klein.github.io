@@ -1,6 +1,5 @@
 import LadderSvg from "@/components/LadderSvg";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useWhiteMode } from "@/contexts/WhiteModeContext";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -8,13 +7,11 @@ import { Link } from "react-router-dom";
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { isWhiteMode, toggleWhiteMode, getBackgroundClass } = useWhiteMode();
 
   const links = [
-    { path: "/", label: "Home", rotation: "-3deg" },
-    { path: "/cv", label: "CV", rotation: "-2deg" },
-    { path: "/thoughts", label: "Thoughts", rotation: "-1deg" },
-    { path: "/projects", label: "Projects", rotation: "2deg" },
+    { path: "/cv", label: "CV", rotation: "-2deg", top: 135 },
+    { path: "/thoughts", label: "Thoughts", rotation: "-1deg", top: 180 },
+    { path: "/projects", label: "Projects", rotation: "2deg", top: 230 },
   ];
 
   return (
@@ -24,11 +21,12 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         {/* Mobile Header */}
         <div className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
           <div className="flex items-center justify-between p-4">
-            <span
-              className={`font-courier text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] ${getBackgroundClass()} font-medium text-sm px-3 py-2`}
+            <Link
+              to="/"
+              className="font-courier text-[#6E59A5] font-bold text-sm px-3 py-2"
             >
-              Victoria Klein
-            </span>
+              Vic Klein
+            </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-[#6E59A5]"
@@ -52,12 +50,26 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
                   {link.label}
                 </Link>
               ))}
-              <button
-                onClick={toggleWhiteMode}
-                className="px-6 py-3 border-2 border-dashed border-[#FF6B6B] bg-[#FFDEE2] hover:bg-[#FFB6C1] font-courier text-sm text-[#6E59A5] transition-colors"
+              <a
+                href="https://x.com/its_hapenin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-courier text-2xl text-[#6E59A5] hover:text-[#ea384c] transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                {isWhiteMode ? "colour" : "plain"}
-              </button>
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                @its_hapenin
+              </a>
+              <a
+                href="https://www.linkedin.com/in/victoria--klein"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-courier text-2xl text-[#6E59A5] hover:text-[#ea384c] transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                victoria--klein
+              </a>
             </div>
           </div>
         )}
@@ -68,44 +80,28 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
       {/* Desktop Layout */}
       <div className="hidden lg:block min-h-screen pt-16">
-        {/* White Mode Toggle Button */}
-        <button
-          onClick={toggleWhiteMode}
-          className="fixed top-48 right-8 z-50 px-4 py-2 border-2 border-dashed border-[#FF6B6B] bg-[#FFDEE2] hover:bg-[#FFB6C1] font-courier text-sm text-[#6E59A5] transition-colors"
-        >
-          {isWhiteMode ? "colour" : "plain"}
-        </button>
         <div className="max-w-4xl mx-auto px-4 py-16">
           <div className="fixed h-[400px] -ml-48">
             <div className="relative h-full w-64">
               <div className="absolute left-56 top-16 h-full w-64">
-                <div className="absolute left-0 top-0 z-40 mb-4">
-                  <span
-                    className={`font-courier text-[#6E59A5] border-2 border-dashed border-[#FF6B6B] ${getBackgroundClass()} font-medium text-base px-[16px] mx-[45px] py-[8px] my-0`}
+                <div className="absolute left-0 top-6 z-40 mb-4 w-full flex justify-center">
+                  <Link
+                    to="/"
+                    className="font-courier text-[#6E59A5] hover:text-[#ea384c] transition-colors font-bold text-xl px-[16px] py-[8px]"
                   >
-                    Victoria Klein
-                  </span>
+                    Vic Klein
+                  </Link>
                 </div>
                 <LadderSvg />
                 <div
-                  className="absolute bottom-20 left-24 w-24 h-24"
-                  style={{
-                    clipPath:
-                      "polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)",
-                    position: "relative",
-                  }}
+                  className="absolute bottom-24 left-24 w-24 h-24"
+                  style={{ position: "relative", zIndex: 50 }}
                 >
-                  <Avatar
-                    className="w-full h-full overflow-hidden"
-                    style={{
-                      clipPath:
-                        "polygon(40% 0%, 90% 10%, 100% 60%, 70% 90%, 20% 100%, 0% 50%, 15% 10%)",
-                    }}
-                  >
+                  <Avatar className="w-full h-full overflow-visible bg-transparent">
                     <AvatarImage
-                      src="/lovable-uploads/86d1ae5f-fce3-4935-9fb3-55a67db6a5cb.png"
+                      src="/images/profile.png"
                       alt="Victoria's profile"
-                      className="object-cover w-full h-full"
+                      className="object-contain w-full h-full"
                     />
                     <AvatarFallback>VK</AvatarFallback>
                   </Avatar>
@@ -116,7 +112,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
                   key={link.path}
                   className="absolute"
                   style={{
-                    top: `${index * 50 + 130}px`,
+                    top: `${link.top}px`,
                     left: "300px",
                     transform: `rotate(${link.rotation})`,
                     zIndex: 30,
@@ -132,6 +128,48 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
                   </Link>
                 </div>
               ))}
+              <div
+                className="absolute"
+                style={{
+                  top: "280px",
+                  left: "290px",
+                  transform: "rotate(1deg)",
+                  zIndex: 30,
+                }}
+              >
+                <a
+                  href="https://x.com/its_hapenin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-1.5 font-courier text-sm font-bold transition-colors whitespace-nowrap leading-tight px-3 ${hoveredLink === "twitter" ? "text-[#ea384c]" : "text-primary"}`}
+                  onMouseEnter={() => setHoveredLink("twitter")}
+                  onMouseLeave={() => setHoveredLink(null)}
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  @its_hapenin
+                </a>
+              </div>
+              <div
+                className="absolute"
+                style={{
+                  top: "325px",
+                  left: "290px",
+                  transform: "rotate(-1deg)",
+                  zIndex: 30,
+                }}
+              >
+                <a
+                  href="https://www.linkedin.com/in/victoria--klein"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-1.5 font-courier text-xs font-bold transition-colors whitespace-nowrap leading-tight px-3 ${hoveredLink === "linkedin" ? "text-[#ea384c]" : "text-primary"}`}
+                  onMouseEnter={() => setHoveredLink("linkedin")}
+                  onMouseLeave={() => setHoveredLink(null)}
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  victoria--klein
+                </a>
+              </div>
             </div>
           </div>
         </div>

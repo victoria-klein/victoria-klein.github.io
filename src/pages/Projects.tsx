@@ -1,13 +1,10 @@
 import MainLayout from "@/components/MainLayout";
-import { useWhiteMode } from "@/contexts/WhiteModeContext";
 
 const Projects = () => {
-  const { getBackgroundClass } = useWhiteMode();
-
   return (
     <MainLayout>
       <div
-        className={`${getBackgroundClass()} border-2 border-dashed border-[#FF6B6B] p-6 rounded-none w-full`}
+        className="notepad p-8 w-full relative"
       >
         <p className="font-courier text-sm text-gray-700">
           My personal projects/tooling are (mainly) a product of curiosity

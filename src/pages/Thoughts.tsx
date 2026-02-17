@@ -1,97 +1,64 @@
 import MainLayout from "@/components/MainLayout";
-import { useWhiteMode } from "@/contexts/WhiteModeContext";
 
 const Thoughts = () => {
-  const { getBackgroundClass } = useWhiteMode();
-
   return (
     <MainLayout>
       <div
-        className={`${getBackgroundClass()} border-2 border-dashed border-[#FF6B6B] p-6 rounded-none w-full space-y-4`}
+        className="notepad p-8 w-full space-y-4 relative"
       >
         <div>
           <p className="font-courier text-md text-gray-700 text-left font-bold">
-            Packages
+            My own
           </p>
-          <p className="font-courier text-sm text-gray-700 mt-2 text-left border border-dashed border-gray-700 p-2">
-            <div className="grid grid-cols-[230px_1fr] gap-4 gap-y-1">
-              <span>
-                <a
-                  href="https://github.com/guidance-ai/guidance"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  guidance
-                </a>{" "}
-              </span>
-              <span>Constrained generation meets CFGs</span>
-              <span>
-                <a
-                  href="https://dspy.ai/"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  DSPy
-                </a>
-              </span>
-              <span>Prompts as programs</span>
-              <span>
-                <a
-                  href="https://flax.readthedocs.io/en/v0.8.3/experimental/nnx/index.html"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  NNX
-                </a>{" "}
-                (JAX)
-              </span>
-              <span>Stateless to a tee</span>
-
-              {/* <span>
-              <a
-                href="https://docs.kidger.site/equinox/"
-                className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-              >
-                Equinox
-              </a> (JAX)
-            </span>
-            <span>PyTree nn Modules</span> */}
-
-              <span>
-                <a
-                  href="https://pytorch.org/blog/flexattention/"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  FlexAttention
-                </a>{" "}
-                (PyTorch)
-              </span>
-              <span>Customisable Flash-like performance</span>
-
-              <span>
-                <a
-                  href="https://symbolica.io/"
-                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
-                >
-                  Symbolica
-                </a>
-              </span>
-              <span>CUDA-accelerated computer algebra</span>
-            </div>
-            {/* <p className="font-courier text-sm text-gray-700 text-left font-normal underline">Books that I've enjoyed:</p>
-          <p className="font-courier text-gray-700 mt-2 text-left text-sm">
-            Figuring, Maria Popova
+          <p className="font-courier text-md text-gray-700 text-left italic mt-2">
+            2026
+          </p>
+          <p className="font-courier text-md text-gray-700 mt-0 text-left border border-dashed border-gray-700 p-2 text-sm">
+            <span className="font-bold">* </span>
+            <a
+              href="https://www.symbolica.ai/blog/arcgentica"
+              className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SotA ARC-AGI-2 Results with REPL Agents
+            </a>{" "}
             <br />
-            The Enigma of Reason, Hugo Mercier & Dan Sperber
-          </p> */}
+            <span className="tracking-tighter">
+              State-of-the-art ARC-AGI-2 results using REPL agents built with
+              Symbolica's Agentica framework, achieving 85.28% with recursive
+              delegation across sub-agents.
+            </span>
           </p>
-        </div>
-        <div>
-          <p className="font-courier text-md text-gray-700 text-left font-bold">
-            Blogs/posts
-          </p>
-          <br />
           <p className="font-courier text-md text-gray-700 text-left italic">
             2025
           </p>
-          <p className="font-courier text-md text-gray-700 mt-2 text-left border border-dashed border-gray-700 p-2 text-sm">
+          <p className="font-courier text-md text-gray-700 mt-0 text-left border border-dashed border-gray-700 p-2 text-sm">
+            <span className="font-bold">* </span>
+            <a
+              href="https://www.symbolica.ai/blog/beyond-code-mode-agentica"
+              className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Beyond Code Mode
+            </a>{" "}
+            <br />
+            <span className="tracking-tighter">
+              On building agents that interact with runtime objects through code,
+              where the agent's scope evolves naturally as it works.
+            </span>
+          </p>
+          <br />
+        </div>
+        <div>
+          <p className="font-courier text-md text-gray-700 text-left font-bold">
+            Others'
+          </p>
+          <p className="font-courier text-md text-gray-700 text-left italic">
+            2025
+          </p>
+          <p className="font-courier text-md text-gray-700 mt-0 text-left border border-dashed border-gray-700 p-2 text-sm">
             <span className="font-bold">* </span>
             <a
               href="https://blog.cloudflare.com/code-mode/"
@@ -160,11 +127,10 @@ const Thoughts = () => {
               kernels.{" "}
             </span>
           </p>
-          <br />
           <p className="font-courier text-md text-gray-700 text-left italic">
             2024
           </p>
-          <p className="font-courier text-md text-gray-700 mt-2 text-left border border-dashed border-gray-700 p-2 text-sm">
+          <p className="font-courier text-md text-gray-700 mt-0 text-left border border-dashed border-gray-700 p-2 text-sm">
             <span className="font-bold">* </span>
             <a
               href="https://depyf.readthedocs.io/en/latest/walk_through.html"
@@ -200,7 +166,73 @@ const Thoughts = () => {
           </p>
           <br />
         </div>{" "}
-        {/*  */}
+        <div>
+          <p className="font-courier text-md text-gray-700 text-left font-bold">
+            Packages I like
+          </p>
+          <p className="font-courier text-sm text-gray-700 mt-2 text-left border border-dashed border-gray-700 p-2">
+            <div className="grid grid-cols-[230px_1fr] gap-4 gap-y-1">
+              <span>
+                <a
+                  href="https://github.com/symbolica-ai/agentica-python-sdk"
+                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+                >
+                  Agentica SDK
+                </a>
+              </span>
+              <span>Agents with a stateful REPL</span>
+              <span>
+                <a
+                  href="https://github.com/guidance-ai/guidance"
+                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+                >
+                  guidance
+                </a>{" "}
+              </span>
+              <span>Constrained generation meets CFGs</span>
+              <span>
+                <a
+                  href="https://dspy.ai/"
+                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+                >
+                  DSPy
+                </a>
+              </span>
+              <span>Prompts as programs</span>
+              <span>
+                <a
+                  href="https://flax.readthedocs.io/en/v0.8.3/experimental/nnx/index.html"
+                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+                >
+                  NNX
+                </a>{" "}
+                (JAX)
+              </span>
+              <span>Stateless to a tee</span>
+
+              <span>
+                <a
+                  href="https://pytorch.org/blog/flexattention/"
+                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+                >
+                  FlexAttention
+                </a>{" "}
+                (PyTorch)
+              </span>
+              <span>Customisable Flash-like performance</span>
+
+              <span>
+                <a
+                  href="https://symbolica.io/"
+                  className="underline text-[#8B5CF6] hover:text-[#8B5CF6] transition-colors"
+                >
+                  Symbolica
+                </a>
+              </span>
+              <span>CUDA-accelerated computer algebra</span>
+            </div>
+          </p>
+        </div>
       </div>
     </MainLayout>
   );

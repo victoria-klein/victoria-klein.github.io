@@ -49,7 +49,7 @@ export default {
         },
       },
       fontFamily: {
-        courier: ["Courier New", "Courier", "monospace"],
+        courier: ["IBM Plex Mono", "monospace"],
       },
     },
   },
