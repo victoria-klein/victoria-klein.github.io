@@ -1,13 +1,15 @@
 import MainLayout from "@/components/MainLayout";
 
-
 const CV = () => {
   return (
     <MainLayout>
-      <div className="notepad p-4 sm:p-8 w-full relative">
-        <p className="font-courier text-md text-gray-700 text-left">
-          Reach out for access!
-        </p>
+      <div className="w-full" style={{ height: "calc(100vh - 100px)" }}>
+        <embed
+          src="/resume.pdf"
+          type="application/pdf"
+          width="100%"
+          height="100%"
+        />
       </div>
     </MainLayout>
   );
