@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 export const navLinks = [
-  { path: "/cv", label: "CV", rotation: "-2deg" },
   { path: "/thoughts", label: "Thoughts", rotation: "-1deg" },
   { path: "/projects", label: "Projects", rotation: "2deg" },
 ];
