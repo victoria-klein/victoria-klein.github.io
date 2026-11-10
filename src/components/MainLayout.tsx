@@ -1,4 +1,4 @@
-import LadderNav, { LinkedInIcon, navLinks, XIcon } from "@/components/LadderNav";
+import LadderNav, { GitHubIcon, LinkedInIcon, navLinks, XIcon } from "@/components/LadderNav";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -14,8 +14,9 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="lg:hidden">
         {isHome ? (
           /* Mobile Home: centered ladder with nav */
-          <div className="min-h-screen flex items-center justify-center">
+          <div className="min-h-screen flex flex-col items-center justify-center gap-8 px-4 py-12">
             <LadderNav />
+            <div className="w-full max-w-md">{children}</div>
           </div>
         ) : (
           /* Mobile Other Pages: burger menu + content */
@@ -62,6 +63,16 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
                   >
                     <LinkedInIcon className="w-3 h-3" />
                     victoria--klein
+                  </a>
+                  <a
+                    href="https://github.com/victoria-klein"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-courier text-2xl text-[#6E59A5] hover:text-[#ea384c] transition-colors whitespace-nowrap"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <GitHubIcon className="w-3.5 h-3.5" />
+                    victoria-klein
                   </a>
                 </div>
               </div>
